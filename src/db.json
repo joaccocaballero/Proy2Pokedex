@@ -2,6 +2,7 @@
     "pokemons":[
         {
             "id": 1,
+            "img": "public/images/bulbasaur.png",
             "name":"Bulbasaur",
             "weight": "6,9 Kg",
             "height": "0,7m",
@@ -22,6 +23,7 @@
         },
         {
             "id": 2,
+            "img": "public/images/charmander.png",
             "name":"Charmander",
             "weight": "8,5 Kg",
             "height": "0,6m",
@@ -41,6 +43,7 @@
         },
         {
             "id": 3,
+            "img": "public/images/squirtle.png",
             "name":"Squirtle",
             "weight": "9,0 Kg",
             "height": "0,5m",
