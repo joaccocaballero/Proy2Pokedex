@@ -58,6 +58,64 @@
                 "Sp. Defense": 35,
                 "Speed": 80
             }
+        },
+        {
+            "id": 7,
+            "name": "Ditto",
+            "weight": "4,0 Kg",
+            "height": "0,3 m",
+            "moves": "Limber, Imposter",
+            "description": "It can reconstitute its entire cellular structure to change into what it seed, but it returns to normal when it relaxes.",
+            "type": [
+                "Normal"
+            ],
+            "base": {
+                "HP": 48,
+                "Attack": 48,
+                "Defense": 48,
+                "Sp. Attack": 48,
+                "Sp. Defense": 48,
+                "Speed": 48
+            }
+        },
+        {
+            "id": 8,
+            "name": "Mew",
+            "weight": "4,0 Kg",
+            "height": "0,4 m",
+            "moves": "Synchronize",
+            "description": "When viewed from a microscope, this Pokémon's short, fine, delicate hair can be seen",
+            "type": [
+                "Psychic"
+            ],
+            "base": {
+                "HP": 100,
+                "Attack": 100,
+                "Defense": 100,
+                "Sp. Attack": 100,
+                "Sp. Defense": 100,
+                "Speed": 100
+            }
+        },
+        {
+            "id": 9,
+            "name": "Aron",
+            "weight": "60,0 Kg",
+            "height": "0,4 m",
+            "moves": "Sturdy, Rock-Head",
+            "description": "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body",
+            "type": [
+                "Steel",
+                "Rock"
+            ],
+            "base": {
+                "HP": 50,
+                "Attack": 70,
+                "Defense": 100,
+                "Sp. Attack": 40,
+                "Sp. Defense": 40,
+                "Speed": 30
+            }
         }
     ]
 }
