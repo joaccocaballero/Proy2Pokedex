@@ -1,5 +1,24 @@
 {
     "pokemons":[
-        {}
+        {
+            "id": 4,
+            "name":"Butterfree",
+            "weight": "32,0 Kg",
+            "height": "1,1m",
+            "moves": "Compound-Eyes, Tinted-Lens",
+            "description": "In battle, it flaps its wings at great speed to release highly toxic dust into the air",
+            "type": [
+                "Bug",
+                "Flying"
+            ],
+            "base": {
+                "HP": 60,
+                "Attack": 45,
+                "Defense": 50,
+                "Sp. Attack": 90,
+                "Sp. Defense": 80,
+                "Speed": 70
+            }
+        }
     ]
 }
