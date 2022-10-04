@@ -40,7 +40,6 @@ header {
   flex-direction: column;
   
 }
-
 .searcher{
   margin-top: 5%;
   background: url("../public/images/search.png");
@@ -51,16 +50,18 @@ header {
   border-style:solid;
   border-color: #E0E0E0;
 }
-
 .searcher:focus{
   background: none;
 }
-
 .searcher:focus::placeholder {
   color: transparent;
 }
-
 ::-webkit-input-placeholder {
   text-align: center;
+}
+
+.pokemons.container{
+  display: flex;
+  
 }
 
