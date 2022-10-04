@@ -6,16 +6,18 @@ import { useEffect } from 'react';
 import Buscador from './components/Buscador/buscador';
 
 
+
 function App() {
   const [pokemonsList, setPokemonsList] = useState([]) 
-
+/*
   useEffect(){}
 
   
+*/
   return (
     <>
          <Buscador/> 
-
+ 
     
     </>
   );

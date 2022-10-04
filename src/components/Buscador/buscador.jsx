@@ -1,4 +1,6 @@
 import React from "react";
+import Pokemon from "./pokemon";
+
 
 const Buscador = (props) => {
     return (
@@ -18,7 +20,7 @@ const Buscador = (props) => {
                 </header>
                 <input className="searcher" type="text" placeholder="Buscar" onfocus="this.placeholder = ''" />
                 <div className="pokemons-container">
-
+                    <Pokemon />
                 </div>
             </div>
 
