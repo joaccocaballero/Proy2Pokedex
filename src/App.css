@@ -1,4 +1,9 @@
 
+body,html{
+  height: 97vh;
+  margin: 0px;
+  background-color: #F7F7F7;
+}
 
 h1 {
   margin: 0px;
@@ -33,16 +38,29 @@ header {
   margin:15px;
   display: flex;
   flex-direction: column;
+  
 }
 
 .searcher{
+  margin-top: 5%;
   background: url("../public/images/search.png");
-  background-size: contain;
+  background-size: 12px 12px;
   background-repeat: no-repeat;
-  background-position: 50%;
+  background-position: 40%;
+  border-radius: 5px;
+  border-style:solid;
+  border-color: #E0E0E0;
 }
 
 .searcher:focus{
   background: none;
+}
+
+.searcher:focus::placeholder {
+  color: transparent;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
 }
 

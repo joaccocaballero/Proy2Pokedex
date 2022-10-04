@@ -16,11 +16,11 @@ const Buscador = () => {
                         </svg>
                     </div>
                 </header>
-                <input className="searcher" type="text" placeholder="Buscar"/> 
+                <input className="searcher" type="text" placeholder="Buscar" onfocus="this.placeholder = ''" /> 
             </div>
 
         </>
     )
 }
 
-export default Buscador
+export default Buscador;
