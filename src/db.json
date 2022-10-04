@@ -19,6 +19,45 @@
                 "Sp. Defense": 80,
                 "Speed": 70
             }
+        },
+        {
+            "id": 5,
+            "name":"Pikachu",
+            "weight": "6,0 Kg",
+            "height": "0,4m",
+            "moves": "Mega-Punch, Pay-Day",
+            "description": "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy",
+            "type": [
+                "Electric"
+            ],
+            "base": {
+                "HP": 35,
+                "Attack": 55,
+                "Defense": 40,
+                "Sp. Attack": 50,
+                "Sp. Defense": 50,
+                "Speed": 90
+            }
+        },
+        {
+            "id": 6,
+            "name":"Gastly",
+            "weight": "0,1 Kg",
+            "height": "1,3m",
+            "moves": "Levitate",
+            "description": "Born from gases, anyone would faint if engulfed by its gaseous body, which contains poison",
+            "type": [
+                "Ghost",
+                "Poison"
+            ],
+            "base": {
+                "HP": 30,
+                "Attack": 35,
+                "Defense": 30,
+                "Sp. Attack": 100,
+                "Sp. Defense": 35,
+                "Speed": 80
+            }
         }
     ]
 }
