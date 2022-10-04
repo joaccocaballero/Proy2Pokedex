@@ -60,7 +60,7 @@
         },
         {
             "id": 4,
-            "img": "",
+            "img": "./public/images/butterfree.png",
             "name":"Butterfree",
             "weight": "32,0 Kg",
             "height": "1,1m",
@@ -81,6 +81,7 @@
         },
         {
             "id": 5,
+            "img": "./public/images/pikachu.png",
             "name":"Pikachu",
             "weight": "6,0 Kg",
             "height": "0,4m",
@@ -100,6 +101,7 @@
         },
         {
             "id": 6,
+            "img": "./public/images/gastly.png",
             "name":"Gastly",
             "weight": "0,1 Kg",
             "height": "1,3m",
@@ -120,6 +122,7 @@
         },
         {
             "id": 7,
+            "img": "./public/images/ditto.png",
             "name": "Ditto",
             "weight": "4,0 Kg",
             "height": "0,3 m",
@@ -139,6 +142,7 @@
         },
         {
             "id": 8,
+            "img": "./public/images/mew.png",
             "name": "Mew",
             "weight": "4,0 Kg",
             "height": "0,4 m",
@@ -158,6 +162,7 @@
         },
         {
             "id": 9,
+            "img": "./public/images/aron.png",
             "name": "Aron",
             "weight": "60,0 Kg",
             "height": "0,4 m",
