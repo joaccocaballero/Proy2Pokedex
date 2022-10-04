@@ -72,13 +72,16 @@ header {
   width: 33%;
   height: 33%;
   border: 2px solid blue;
-  border-radius: 5px;
+  border-radius: 10px;
+  font-family: 'Poppins', sans-serif;
  
 }
 .pokemon-art {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin: 5px;
+  align-items: center;
 }
 .pokemon-art > img {
   width: 80%;
@@ -88,6 +91,15 @@ header {
   text-align: center;
   background-color: blue;
   color: white;
+}
+
+.pokemon-name p{
+  padding: 5px;
+}
+
+.id{
+  margin-left: 60%;
+  font-size: 12px;
 
 }
 
@@ -97,80 +109,67 @@ header {
 
 
 .Rock {
-  background-color: #B69E31
+  background-color: #B69E31;
+  color: #B69E31
 }
 .Fire{
-  background-color: #F57D31
+  background-color: #F57D31;
+  color: #F57D31;
 }
-
 .Water{
-  background-color: #6493EB
-
+  background-color: #6493EB;
+  color: #6493EB;
 }
-
 .Bug{
-  background-color: #A7B723
+  background-color: #A7B723;
+  color: #A7B723;
 }
-
 .Electric{
-  background-color: #F9CF30
+  background-color: #F9CF30;
+  color: #F9CF30;
 }
-
 .Ghost{
-  background-color: #70559B
-
+  background-color: #70559B;
+  color: #70559B;
 }
-
 .Steel{
-  background-color: #B7B9D0
-
+  background-color: #B7B9D0;
+  color: #B7B9D0;
 }
-
 .Grass{
-  background-color:  #74CB48
-
+  background-color:  #74CB48;
+  color: #74CB48;
 }
 .Dark{
-  background-color:  #75574C
-
+  background-color:  #75574C;
+  color: #75574C;
 }
 .Fairy{
-  background-color:  #E69EAC
+  background-color:  #E69EAC;
+  color: #E69EAC;
 }
 .Normal{
-  background-color:  #AAA67F
-
-
+  background-color:  #AAA67F;
+  color: #AAA67F;
 }
 
-.Fighting
-{
-  background-color:  #C12239
-
+.Fighting{
+  background-color:  #C12239;
+  color: #C12239;
 }
-.Flying
-{
-  background-color:  #A891EC
-
+.Flying{
+  background-color:  #A891EC;
+  color: #A891EC;
 }
-.Poison
-{
-  background-color:  #A43E9E
-
-
+.Poison{
+  background-color:  #A43E9E;
+  color: #A43E9E;
 }
-.Ground
-
-{
-  background-color:  #DEC16B
-
-
+.Ground{
+  background-color:  #DEC16B;
+  color: #DEC16B;
 }
-
 .Dragon{
-
-  background-color:  #7037FF
-
-
-
+  background-color:  #7037FF;
+  color: #7037FF;
 }
