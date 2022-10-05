@@ -1,8 +1,12 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Pokemon from "./pokemon";
 
-
 const Buscador = (props) => {
+    let list = props.list
+    useEffect(()=>{
+        list = props.filteredList(list, props.searchValue)
+        console.log(list)
+    },[props.searchValue])
     return (
         <>
             <div className="search-container">
@@ -18,17 +22,18 @@ const Buscador = (props) => {
                         </svg>
                     </div>
                 </header>
-                <input className="searcher" type="text" placeholder="Buscar" onfocus="this.placeholder = ''" />
+                <input className="searcher" type="text" placeholder="Buscar" onFocus="this.placeholder = ''" onChange={(e)=>props.search(e.target.value)} />
                 <div className="pokemons-container">
                     {
-                        props.list.map((item, key) => {
-                            return (
-                                <Pokemon name={item.name} 
-                                imagen={item.img} 
-                                id={item.id}
-                                type={item.type[0]}
-                                /> 
-                            )
+                        list.map((item, key) => {
+                                return (
+                                    <Pokemon name={item.name}
+                                        imagen={item.img}
+                                        id={item.id}
+                                        type={item.type[0]}
+                                        key={key}
+                                    />
+                                )
                         })
                     }
                 </div>

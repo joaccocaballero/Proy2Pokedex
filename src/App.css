@@ -99,7 +99,7 @@ header {
 .pokemon-name p{
   padding: 5px;
   color: white;
- 
+  font-size: small;
 }
 
 .id{
@@ -112,12 +112,12 @@ header {
 .Rock {
   background-color: #B69E31;
   color: #B69E31;
-  border: 1px solid #6493EB;
+  border: 2px solid #B69E31;
 }
 .Fire{
   background-color: #F57D31;
   color: #F57D31;
-  border: 1px solid #F57D31;
+  border: 2px solid #F57D31;
 }
 .Water{
   background-color: #6493EB;
@@ -127,66 +127,72 @@ header {
 .Bug{
   background-color: #A7B723;
   color: #A7B723;
-  border: 1px solid #6493EB;
+  border: 2px solid #A7B723;
 }
 .Electric{
   background-color: #F9CF30;
   color: #F9CF30;
-  border: 1px solid #6493EB;
+  border: 2px solid #F9CF30;
 }
 .Ghost{
   background-color: #70559B;
   color: #70559B;
-  border: 1px solid #6493EB;
+  border: 2px solid #70559B;
 }
 .Steel{
   background-color: #B7B9D0;
   color: #B7B9D0;
-  border: 1px solid #6493EB;
+  border: 2px solid #B7B9D0;
 }
 .Grass{
   background-color:  #74CB48;
   color: #74CB48;
-  border: 1px solid #6493EB;
+  border: 2px solid #74CB48;
 }
 .Dark{
   background-color:  #75574C;
   color: #75574C;
-  border: 1px solid #6493EB;
+  border: 2px solid #75574C;
 }
 .Fairy{
   background-color:  #E69EAC;
   color: #E69EAC;
-  border: 1px solid #6493EB;
+  border: 2px solid #E69EAC;
 }
 .Normal{
   background-color:  #AAA67F;
   color: #AAA67F;
-  border: 1px solid #6493EB;
+  border: 2px solid #AAA67F;
 }
 
 .Fighting{
   background-color:  #C12239;
   color: #C12239;
-  border: 1px solid #6493EB;
+  border: 2px solid #C12239;
 }
 .Flying{
   background-color:  #A891EC;
   color: #A891EC;
-  border: 1px solid #6493EB;
+  border: 2px solid #A891EC;
 }
 .Poison{
   background-color:  #A43E9E;
   color: #A43E9E;
-  border: 1px solid #6493EB;
+  border: 2px solid #A43E9E;
 }
 .Ground{
   background-color:  #DEC16B;
   color: #DEC16B;
-  border: 1px solid #6493EB;
+  border: 2px solid #DEC16B;
 }
 .Dragon{
   background-color:  #7037FF;
   color: #7037FF;
-  border: 1px solid #6493EB;
+  border: 2px solid #7037FF;
+}
+
+.Psychic{
+  background-color: #FB5584;
+  color: #FB5584;
+  border: 2px solid #FB5584;
 }

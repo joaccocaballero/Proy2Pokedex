@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -9,27 +9,29 @@ import Buscador from './components/Buscador/buscador';
 
 function App() {
   const [pokemonsList, setPokemonsList] = useState([]) 
+  const [searchInput, setSearchInput] = useState("")
+
 
   const getPokemons = () => {
-    fetch(" http://localhost:4000/pokemons")
+    fetch("http://localhost:4000/pokemons")
       .then(response => response.json())
       .then(data => {
-     
         setPokemonsList(data)
       })
   }
 
+  const filteredPokemons = (pokemonsList, searchInput) => {
+    return pokemonsList.filter((item) => item.name === searchInput)
+  }
+
   useEffect(()=>{
     getPokemons()
-    console.log(pokemonsList)
   },[pokemonsList])
 
 
   return (
     <>
-         <Buscador list={pokemonsList}/> 
- 
-    
+      <Buscador list={pokemonsList} search={setSearchInput} searchValue={searchInput} filteredList={filteredPokemons}/> 
     </>
   );
 }
