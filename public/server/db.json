@@ -2,7 +2,7 @@
     "pokemons":[
         {
             "id": 1,
-            "img": "public/images/bulbasaur.png",
+            "img": "./images/bulbasaur.png",
             "name":"Bulbasaur",
             "weight": "6,9 Kg",
             "height": "0,7m",
@@ -23,7 +23,7 @@
         },
         {
             "id": 2,
-            "img": "public/images/charmander.png",
+            "img": "./images/charmander.png",
             "name":"Charmander",
             "weight": "8,5 Kg",
             "height": "0,6m",
@@ -43,7 +43,7 @@
         },
         {
             "id": 3,
-            "img": "public/images/squirtle.png",
+            "img": "./images/squirtle.png",
             "name":"Squirtle",
             "weight": "9,0 Kg",
             "height": "0,5m",
@@ -63,7 +63,7 @@
         },
         {
             "id": 4,
-            "img": "./public/images/butterfree.png",
+            "img": "./images/butterfree.png",
             "name":"Butterfree",
             "weight": "32,0 Kg",
             "height": "1,1m",
@@ -84,7 +84,7 @@
         },
         {
             "id": 5,
-            "img": "./public/images/pikachu.png",
+            "img": "././images/pikachu.png",
             "name":"Pikachu",
             "weight": "6,0 Kg",
             "height": "0,4m",
@@ -104,7 +104,7 @@
         },
         {
             "id": 6,
-            "img": "./public/images/gastly.png",
+            "img": "././images/gastly.png",
             "name":"Gastly",
             "weight": "0,1 Kg",
             "height": "1,3m",
@@ -125,7 +125,7 @@
         },
         {
             "id": 7,
-            "img": "./public/images/ditto.png",
+            "img": "././images/ditto.png",
             "name": "Ditto",
             "weight": "4,0 Kg",
             "height": "0,3 m",
@@ -145,7 +145,7 @@
         },
         {
             "id": 8,
-            "img": "./public/images/mew.png",
+            "img": "././images/mew.png",
             "name": "Mew",
             "weight": "4,0 Kg",
             "height": "0,4 m",
@@ -165,7 +165,7 @@
         },
         {
             "id": 9,
-            "img": "./public/images/aron.png",
+            "img": "././images/aron.png",
             "name": "Aron",
             "weight": "60,0 Kg",
             "height": "0,4 m",

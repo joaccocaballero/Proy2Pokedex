@@ -20,7 +20,17 @@ const Buscador = (props) => {
                 </header>
                 <input className="searcher" type="text" placeholder="Buscar" onfocus="this.placeholder = ''" />
                 <div className="pokemons-container">
-                    <Pokemon />
+                    {
+                        props.list.map((item, key) => {
+                            return (
+                                <Pokemon name={item.name} 
+                                imagen={item.img} 
+                                id={item.id}
+                                type={item.type[0]}
+                                /> 
+                            )
+                        })
+                    }
                 </div>
             </div>
 

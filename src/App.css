@@ -64,17 +64,18 @@ header {
 
 .pokemons-container {
   display: flex;
+  justify-content: center;
   gap: 10px;
-  margin-top: 10px;
+  margin-top: 25px;
+  flex-wrap:wrap;
 }
 
 .pokemon-item{
-  width: 33%;
-  height: 33%;
-  border: 2px solid blue;
+  width: 30%;
+  height: 30%;
   border-radius: 10px;
   font-family: 'Poppins', sans-serif;
- 
+  background-color: white !important;
 }
 .pokemon-art {
   display: flex;
@@ -91,10 +92,14 @@ header {
   text-align: center;
   background-color: blue;
   color: white;
+  border-radius: 0px 0px 10px 10px;
+  margin: 0px;
 }
 
 .pokemon-name p{
   padding: 5px;
+  color: white;
+ 
 }
 
 .id{
@@ -104,72 +109,84 @@ header {
 }
 
 
-
-
-
-
 .Rock {
   background-color: #B69E31;
-  color: #B69E31
+  color: #B69E31;
+  border: 1px solid #6493EB;
 }
 .Fire{
   background-color: #F57D31;
   color: #F57D31;
+  border: 1px solid #F57D31;
 }
 .Water{
   background-color: #6493EB;
   color: #6493EB;
+  border: 2px solid #6493EB;
 }
 .Bug{
   background-color: #A7B723;
   color: #A7B723;
+  border: 1px solid #6493EB;
 }
 .Electric{
   background-color: #F9CF30;
   color: #F9CF30;
+  border: 1px solid #6493EB;
 }
 .Ghost{
   background-color: #70559B;
   color: #70559B;
+  border: 1px solid #6493EB;
 }
 .Steel{
   background-color: #B7B9D0;
   color: #B7B9D0;
+  border: 1px solid #6493EB;
 }
 .Grass{
   background-color:  #74CB48;
   color: #74CB48;
+  border: 1px solid #6493EB;
 }
 .Dark{
   background-color:  #75574C;
   color: #75574C;
+  border: 1px solid #6493EB;
 }
 .Fairy{
   background-color:  #E69EAC;
   color: #E69EAC;
+  border: 1px solid #6493EB;
 }
 .Normal{
   background-color:  #AAA67F;
   color: #AAA67F;
+  border: 1px solid #6493EB;
 }
 
 .Fighting{
   background-color:  #C12239;
   color: #C12239;
+  border: 1px solid #6493EB;
 }
 .Flying{
   background-color:  #A891EC;
   color: #A891EC;
+  border: 1px solid #6493EB;
 }
 .Poison{
   background-color:  #A43E9E;
   color: #A43E9E;
+  border: 1px solid #6493EB;
 }
 .Ground{
   background-color:  #DEC16B;
   color: #DEC16B;
+  border: 1px solid #6493EB;
 }
 .Dragon{
   background-color:  #7037FF;
   color: #7037FF;
+  border: 1px solid #6493EB;
 }

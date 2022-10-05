@@ -9,14 +9,25 @@ import Buscador from './components/Buscador/buscador';
 
 function App() {
   const [pokemonsList, setPokemonsList] = useState([]) 
-/*
-  useEffect(){}
 
-  
-*/
+  const getPokemons = () => {
+    fetch(" http://localhost:4000/pokemons")
+      .then(response => response.json())
+      .then(data => {
+     
+        setPokemonsList(data)
+      })
+  }
+
+  useEffect(()=>{
+    getPokemons()
+    console.log(pokemonsList)
+  },[pokemonsList])
+
+
   return (
     <>
-         <Buscador/> 
+         <Buscador list={pokemonsList}/> 
  
     
     </>
