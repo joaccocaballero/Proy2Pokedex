@@ -41,6 +41,11 @@ header {
   margin-right: 3px;
 }
 
+.alpha-order{
+  max-height: 20px;
+  max-width: 20px;
+}
+
 .search-container{
   margin:15px;
   display: flex;

@@ -1,6 +1,9 @@
 import React, {useEffect} from "react";
 import Pokemon from "./pokemon";
 import { useState } from "react";
+import NumericIcon from "./NumericOrder";
+import AlphabeticOrder from "./AlphabeticOrder";
+
 const Buscador = (props) => {
    
     const [listFiltered, setListFiltered] = useState(props.list) 
@@ -19,16 +22,17 @@ const Buscador = (props) => {
                         <img className="img-logo" src="./images/Pokeball.png" alt="" />
                         <h1> Pokedex </h1>
                     </div>
-                    <div className="header-actions">
-                        <span>#</span>
+                    <div className="header-actions" onClick={()=>props.changeOrder(!props.iconOrder)} >
+                        {
+                            props.iconOrder ? <NumericIcon /> : <AlphabeticOrder/>
+                        }
                         <svg className="icono-flecha" xmlns="http://www.w3.org/2000/svg" width="14" height="20" fill="none" viewBox="0 0 10 16">
                             <path fill="#212121" d="m9.017 11.108-.252-.252a.429.429 0 0 0-.606 0l-2.98 2.997V.43A.429.429 0 0 0 4.75 0h-.357a.429.429 0 0 0-.429.429v13.424l-2.98-2.997a.429.429 0 0 0-.606 0l-.252.252a.429.429 0 0 0 0 .606l4.142 4.16a.429.429 0 0 0 .607 0l4.142-4.16a.429.429 0 0 0 0-.606Z" />
                         </svg>
                     </div>
                 </header>
                 <input className="searcher" type="text" placeholder="Buscar" onFocus="this.placeholder = ''" onChange={(e)=>props.search(e.target.value)} />
-                <div className="pokemons-container">
-                
+                <div className="pokemons-container">              
                     {
                         listFiltered.map((item, key) => {
                                 return (
