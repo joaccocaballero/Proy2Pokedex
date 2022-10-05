@@ -5,11 +5,13 @@ const Pokemon = (props) =>{
         <>        
         <div className={"pokemon-item " + props.type}>
             <div className="pokemon-art">
-                <span className="id">{props.id}</span>
+                <div className="id">
+                        <span>#{props.id}</span>    
+                </div>
                 <img src={props.imagen}/>
             </div>
             <div className={"pokemon-name " + props.type}>
-                <p className="text-white">{props.name}</p>
+                <span className="text-white">{props.name}</span>
             </div>
         </div>
     </>
