@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 //import {BrowserRouter, Routes, Route} from "react-router-dom";
 import Buscador from './components/Buscador/buscador';
-
+import Card from './components/pokeCard';
 
 
 function App() {
@@ -21,18 +21,23 @@ function App() {
   }
 
   const filteredPokemons = (pokemonsList, searchInput) => {
-    return pokemonsList.filter((item) => item.name === searchInput)
+    return pokemonsList.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
   }
 
   useEffect(()=>{
     getPokemons()
-  },[pokemonsList])
+  },[])
 
 
   return (
     <>
-      <Buscador list={pokemonsList} search={setSearchInput} searchValue={searchInput} filteredList={filteredPokemons}/> 
-    </>
+    {/*
+      
+      <Card> </Card>
+  */}
+  <Buscador list={pokemonsList} search={setSearchInput} searchValue={searchInput} filteredList={filteredPokemons}/> 
+
+  </>
   );
 }
 

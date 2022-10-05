@@ -17,6 +17,11 @@ header {
   align-items: center;
 }
 
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
 .logo-container{
   display: flex;
   gap: 20px;
@@ -197,4 +202,9 @@ header {
   background-color: #FB5584;
   color: #FB5584;
   border: 2px solid #FB5584;
+}
+
+
+.stats-tag{
+  border-right: 1px solid black;
 }
