@@ -16,8 +16,8 @@
                 "HP": 39,
                 "Attack": 52,
                 "Defense": 43,
-                "Sp. Attack": 60,
-                "Sp. Defense": 50,
+                "Spa": 60,
+                "Spd": 50,
                 "Speed": 65
             }
         },
@@ -36,8 +36,8 @@
                 "HP": 45,
                 "Attack": 49,
                 "Defense": 49,
-                "Sp. Attack": 65,
-                "Sp. Defense": 65,
+                "Spa": 65,
+                "Spd": 65,
                 "Speed": 45
             }
         },
@@ -56,8 +56,8 @@
                 "HP": 44,
                 "Attack": 48,
                 "Defense": 65,
-                "Sp. Attack": 50,
-                "Sp. Defense": 64,
+                "Spa": 50,
+                "Spd": 64,
                 "Speed": 43
             }
         },
@@ -77,8 +77,8 @@
                 "HP": 60,
                 "Attack": 45,
                 "Defense": 50,
-                "Sp. Attack": 90,
-                "Sp. Defense": 80,
+                "Spa": 90,
+                "Spd": 80,
                 "Speed": 70
             }
         },
@@ -97,8 +97,8 @@
                 "HP": 35,
                 "Attack": 55,
                 "Defense": 40,
-                "Sp. Attack": 50,
-                "Sp. Defense": 50,
+                "Spa": 50,
+                "Spd": 50,
                 "Speed": 90
             }
         },
@@ -118,8 +118,8 @@
                 "HP": 30,
                 "Attack": 35,
                 "Defense": 30,
-                "Sp. Attack": 100,
-                "Sp. Defense": 35,
+                "Spa": 100,
+                "Spd": 35,
                 "Speed": 80
             }
         },
@@ -138,8 +138,8 @@
                 "HP": 48,
                 "Attack": 48,
                 "Defense": 48,
-                "Sp. Attack": 48,
-                "Sp. Defense": 48,
+                "Spa": 48,
+                "Spd": 48,
                 "Speed": 48
             }
         },
@@ -158,8 +158,8 @@
                 "HP": 100,
                 "Attack": 100,
                 "Defense": 100,
-                "Sp. Attack": 100,
-                "Sp. Defense": 100,
+                "Spa": 100,
+                "Spd": 100,
                 "Speed": 100
             }
         },
@@ -179,8 +179,8 @@
                 "HP": 50,
                 "Attack": 70,
                 "Defense": 100,
-                "Sp. Attack": 40,
-                "Sp. Defense": 40,
+                "Spa": 40,
+                "Spd": 40,
                 "Speed": 30
             }
         }

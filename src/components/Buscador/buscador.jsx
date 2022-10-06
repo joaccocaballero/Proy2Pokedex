@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Pokemon from "./pokemon";
+import Pokemon from "./Pokemon";
 import { useState } from "react";
 import NumericIcon from "./NumericOrder";
 import AlphabeticOrder from "./AlphabeticOrder";
