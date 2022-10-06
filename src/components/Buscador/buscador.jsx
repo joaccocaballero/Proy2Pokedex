@@ -43,7 +43,7 @@ const Buscador = (props) => {
     return (
         <>
             <div className="search-container">
-                <header>
+                <header className="header-search">
                     <div className="logo-container">
                         <img className="img-logo" src="./images/Pokeball.png" alt="" />
                         <h1> Pokedex </h1>

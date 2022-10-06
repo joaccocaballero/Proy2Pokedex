@@ -1,6 +1,6 @@
 
 body,html{
-  height: 97vh;
+  height: 95vh;
   margin: 0px;
   background-color: #F7F7F7;
 }
@@ -11,16 +11,33 @@ h1, p {
 
 
 
-header {
+.header-search {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.flex-center {
+.flex-center-column {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.flex-center-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between{
+  justify-content: space-evenly;
+}
+
+.bold{
+  font-weight: bold;
+  color: rgb(88, 88, 88)
 }
 
 .flex-column {
@@ -127,29 +144,74 @@ header {
 }
 
 .contenedor-card {
-  margin: 20px;
+  padding: 3%;
+  height: 95vh;
   color: white!important;
 }
 
-.card-img {
+.header-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-row{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7%;
+}
+
+.pokeballBackground{
   display: flex;
   flex-direction: column;
- align-items: center;
- background-image: url("../public/images/Pokeball.png");
- background-repeat: no-repeat;
- background-size: 50%;
- background-position: 90% 30%;
- 
+  align-items: center;
+}
+
+
+#card-img{
+  width: 100vw;
+  height: 25vh;
+  justify-content: center;
+  align-items: center;
+}
+
+#card-img > img{
+  position: fixed;
+}
+
+#card-img > .pokeball-img {
+  margin-left: 40%;
+  position: fixed;
+  opacity:8%;
+
+}
+
+#card-img>.pok-card-img {
+  margin-left: 25%;
 }
 
 .pokemon-type-card{
-  color: white;
+  color: white !important;
   width: fit-content;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin-top: 3%;
+  padding: 1%;
+  font-weight: bold;
 }
 .pokemon-about{
   background-color: white;
   color: black;
+  border-radius: 10px;
+}
+
+.pokemon-weight, .pokemon-height, .pokemon-moves {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+.pokemon-moves > p{
+  text-align: center;
 }
 
 .pokemon-stats {
@@ -161,6 +223,7 @@ header {
   font-size: 10px;
   margin-left: 80%;
 }
+
 
 .Rock {
   background-color: #B69E31;
