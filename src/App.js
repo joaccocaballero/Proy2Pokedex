@@ -32,15 +32,16 @@ function App() {
 
   return (
     <>
-      <Buscador
+         <Card/> 
+      {/*
+        <Buscador
         list={pokemonsList}
         search={setSearchInput}
         searchValue={searchInput}
         filteredList={filteredPokemons}
         iconOrder={numericOrder}
         changeOrder={setNumOrder} /> 
-      {/*
-       <Card/> 
+  
       */}
     </>
     );

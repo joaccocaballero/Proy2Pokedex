@@ -1,4 +1,5 @@
 import React from "react";
+import ProgressBar from "./Buscador/progressBar";
 
 const Card = () => {
     return (
@@ -61,24 +62,22 @@ const Card = () => {
 
                 <div className="pokemon-stats">
                     <div className="stats-tag">
-                        <ul>
-                            <li>
-                                HP
-                                <div>
-                                    div 
-                                    <div className="stats-bar"></div>
-                                </div>
-                            </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                        <ul className="flex-center-column">
+                            <li>HP</li>
+                            <li>ATK</li>
+                            <li>DEF</li>
+                            <li>SATK</li>
+                            <li>SDEF</li>
+                            <li>SPD</li>
                         </ul>
                     </div>
-                </div>
+                    <div className="stats-bar">
+                        <ProgressBar> </ProgressBar>
+                    </div>
+                    
                 </div>
             </div>
+        </div>
         
         </>
     )

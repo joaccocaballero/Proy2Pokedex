@@ -5,10 +5,14 @@ body,html{
   background-color: #F7F7F7;
 }
 
-h1, p {
+h1, p, ul {
   margin: 0px;
 }
 
+ul{
+  padding: 0px;
+  
+}
 
 
 .header-search {
@@ -32,6 +36,7 @@ h1, p {
 }
 
 .flex-between{
+  display: flex;
   justify-content: space-evenly;
 }
 
@@ -140,13 +145,15 @@ h1, p {
 
 
 .stats-tag{
-  border-right: 1px solid black;
+  border-right: 0.5px solid rgb(214, 211, 211);
 }
 
 .contenedor-card {
   padding: 3%;
   height: 95vh;
   color: white!important;
+  border-radius: 10px;
+  margin: 2px;
 }
 
 .header-card{
@@ -197,11 +204,19 @@ h1, p {
   margin-top: 3%;
   padding: 1%;
   font-weight: bold;
+  border-radius: 5px;
+}
+
+.pokemon-description {
+  margin: 10px 0px;
 }
 .pokemon-about{
   background-color: white;
   color: black;
   border-radius: 10px;
+  padding: 15px;
+  height: 55vh;
+
 }
 
 .pokemon-weight, .pokemon-height, .pokemon-moves {
@@ -217,7 +232,41 @@ h1, p {
 .pokemon-stats {
   background-color: white;
   color: black;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  gap: 10px;
 }
+.div-progress-bar{
+ align-items: center;
+ gap: 5px;
+}
+
+.div-progress-bar span{
+
+ }
+.grey-bar {
+  height: 10px;
+  background-color: #F1F1F1;
+  width: 100%;
+  border-radius: 5px;
+}
+.water{
+  height: 10px;
+  background-color: rgb(103, 103, 238);
+  color: rgb(103, 103, 238);
+  width: 75%;
+  border-radius: 5px;
+}
+
+.stats-tag {
+
+}
+
+
+.stats-tag li {
+  list-style: none;
+}
+
 
 .id{ 
   font-size: 10px;
