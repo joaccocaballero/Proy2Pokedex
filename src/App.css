@@ -20,8 +20,13 @@ header {
 .flex-center {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
 .logo-container{
   display: flex;
   gap: 20px;
@@ -116,6 +121,42 @@ header {
   font-size: small;
 }
 
+
+.stats-tag{
+  border-right: 1px solid black;
+}
+
+.contenedor-card {
+  margin: 20px;
+  color: white!important;
+}
+
+.card-img {
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+ background-image: url("../public/images/Pokeball.png");
+ background-repeat: no-repeat;
+ background-size: 50%;
+ background-position: 90% 30%;
+ 
+}
+
+.pokemon-type-card{
+  color: white;
+  width: fit-content;
+  border-radius: 5px;
+}
+.pokemon-about{
+  background-color: white;
+  color: black;
+}
+
+.pokemon-stats {
+  background-color: white;
+  color: black;
+}
+
 .id{ 
   font-size: 10px;
   margin-left: 80%;
@@ -207,9 +248,4 @@ header {
   background-color: #FB5584;
   color: #FB5584;
   border: 2px solid #FB5584;
-}
-
-
-.stats-tag{
-  border-right: 1px solid black;
 }

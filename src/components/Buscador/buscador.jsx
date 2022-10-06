@@ -8,12 +8,38 @@ const Buscador = (props) => {
    
     const [listFiltered, setListFiltered] = useState(props.list) 
     console.log(props.list)
+
     useEffect(()=>{
         setListFiltered(props.filteredList(props.list, props.searchValue))
      
     },[props.searchValue,props.list])
 
+    useEffect(()=>{
+        
+        if(props.iconOrder) {
+            
+            function SortArray(x, y){
+                if (x.id < y.id) {return -1;}
+                if (x.id > y.id) {return 1;}
+                return 0;
+            }
+           const numeric = listFiltered.sort(SortArray)
+           setListFiltered(numeric)
+        } else {
+            function SortArray(x, y){
+                if (x.name < y.name) {return -1;}
+                if (x.name > y.name) {return 1;}
+                return 0;
+            }
+           const alphabetic = listFiltered.sort(SortArray)
+           setListFiltered(alphabetic)
+        }
+      
+       console.log(listFiltered)
+     
+    },[props.iconOrder])
  
+    
     return (
         <>
             <div className="search-container">

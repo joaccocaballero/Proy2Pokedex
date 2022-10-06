@@ -3,12 +3,13 @@ import React from "react";
 const Card = () => {
     return (
         <>
-            <div className="contenedor-card">
-
-                <header className="flex"> 
-                    <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+            <div className="Water contenedor-card ">
+                <header className="header-card"> 
+                    <div className="flex-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <use fill="white"> </use>
                         <path fill="#212121" d="m12.23 20.512.774-.774a.469.469 0 0 0 0-.663l-6.06-6.06h13.337c.26 0 .469-.21.469-.468v-1.094a.469.469 0 0 0-.469-.469H6.944l6.06-6.06a.469.469 0 0 0 0-.662l-.774-.774a.469.469 0 0 0-.662 0l-8.18 8.18a.469.469 0 0 0 0 .664l8.18 8.18c.183.183.48.183.662 0Z"/>
+                    
                     </svg>
 
 
@@ -17,12 +18,13 @@ const Card = () => {
                     <span> #007 </span>
                 </header>
 
-                <div className="flex-center">
+                <div className="flex-column card-img">
+                    
                     <img src="./images/squirtle.png" alt="imagen del pokemon" />
-                    <span> Water </span>
+                    <span className="Water pokemon-type-card"> Water </span>
                 </div>
 
-                <div>
+                <div className="pokemon-about">
                     <h3>About</h3>
                     <div>
                         <div className="pokemon-weight">
