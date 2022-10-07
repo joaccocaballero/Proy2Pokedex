@@ -7,7 +7,6 @@ import AlphabeticOrder from "./AlphabeticOrder";
 const Buscador = (props) => {
    
     const [listFiltered, setListFiltered] = useState(props.list) 
-    //console.log(props.list)
 
     useEffect(()=>{
         setListFiltered(props.filteredList(props.list, props.searchValue))
@@ -33,10 +32,7 @@ const Buscador = (props) => {
             }
            const alphabetic = listFiltered.sort(SortArray)
            setListFiltered(alphabetic)
-        }
-      
-      // console.log(listFiltered)
-     
+        }   
     },[props.iconOrder])
  
     

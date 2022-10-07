@@ -2,22 +2,35 @@ import React from "react";
 import ProgressBar from "./ProgressBar";
 import PokeType from "./PokeType";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 const Card = (props) => {
-    console.log(props.list)
-    const pokemonID = useParams()
-    console.log(pokemonID) //pokemonID es un objeto clase pokemonID con una propiedad llamada pokemonID
-    const detailedPokemon = props.list.find((item) => item.id == pokemonID.pokemonID)
-    console.log(detailedPokemon)
+    const params = useParams()
+    const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
+
+    function getPreviousPokemon(id){
+        if(id==1){
+            return ""
+        }
+        return id-1;
+    }
+
+    function getNextPokemon(id){
+        return id+1;
+    }
 
     return (
         <>
             <div className={detailedPokemon.type[0] + " contenedor-card"} >
                 <header className="header-card">                
                     <div className="flex-row">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 24 24">                  
-                            <path fill="#FFFFFF" d="m12.23 20.512.774-.774a.469.469 0 0 0 0-.663l-6.06-6.06h13.337c.26 0 .469-.21.469-.468v-1.094a.469.469 0 0 0-.469-.469H6.944l6.06-6.06a.469.469 0 0 0 0-.662l-.774-.774a.469.469 0 0 0-.662 0l-8.18 8.18a.469.469 0 0 0 0 .664l8.18 8.18c.183.183.48.183.662 0Z" />
-                        </svg>
+                        <Link to={"/"}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 24 24">
+                                <path fill="#FFFFFF" d="m12.23 20.512.774-.774a.469.469 0 0 0 0-.663l-6.06-6.06h13.337c.26 0 .469-.21.469-.468v-1.094a.469.469 0 0 0-.469-.469H6.944l6.06-6.06a.469.469 0 0 0 0-.662l-.774-.774a.469.469 0 0 0-.662 0l-8.18 8.18a.469.469 0 0 0 0 .664l8.18 8.18c.183.183.48.183.662 0Z" />
+                            </svg>
+                        </Link>
+
                         <h1>{detailedPokemon.name}</h1>
                     </div>
                     <span className="flex-row" style={{fontSize:"Large"}}>{"#"+detailedPokemon.id}</span>
@@ -25,8 +38,23 @@ const Card = (props) => {
 
                 <div className="flex-column pokeballBackground">
                     <div id="card-img">
+                        <div className="left-frame">
+                            <Link to={"/" + getPreviousPokemon(detailedPokemon.id)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" fill="none" transform="rotate(180)" viewBox="0 0 8 16">
+                                <path fill="#FFFFFF" d="m.772 1.19-.619.62a.375.375 0 0 0 0 .53L5.8 8 .153 13.66a.375.375 0 0 0 0 .53l.619.62a.375.375 0 0 0 .53 0l6.545-6.545a.375.375 0 0 0 0-.53L1.302 1.19a.375.375 0 0 0-.53 0Z" />
+                            </svg>
+                            </Link>
+                        </div>
                         <img className="pokeball-img" src="./images/Pokeball.png" alt="imagen pokeball" />
                         <img className="pok-card-img" src={detailedPokemon.img} alt="imagen del pokemon" />
+                        <div className="right-frame">
+                            <Link to={"/" + getNextPokemon(detailedPokemon.id)}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" fill="none" viewBox="0 0 8 16">
+                                <path fill="#FFFFFF" d="m.772 1.19-.619.62a.375.375 0 0 0 0 .53L5.8 8 .153 13.66a.375.375 0 0 0 0 .53l.619.62a.375.375 0 0 0 .53 0l6.545-6.545a.375.375 0 0 0 0-.53L1.302 1.19a.375.375 0 0 0-.53 0Z" />
+                            </svg>
+                            </Link>      
+                        </div>
+                      
                     </div>    
                 </div>
                 

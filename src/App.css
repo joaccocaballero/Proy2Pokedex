@@ -195,6 +195,18 @@ ul{
   margin-left: 25%;
 }
 
+.left-frame{
+  position: fixed;
+  left: 15px;
+  top: 18%;
+}
+
+.right-frame{
+  position: fixed;
+  top:18%;
+  right: 15px;
+}
+
 .pokemon-type-card{
   color: white !important;
   width: fit-content;
@@ -234,7 +246,9 @@ ul{
 .pokemon-weight, .pokemon-height, .pokemon-moves {
   display: flex;
   flex-direction: column;
-  gap:5px;
+  width: 35%;
+  justify-content: space-evenly;
+  height: 100%;
 }
 
 .pokemon-moves > p{
