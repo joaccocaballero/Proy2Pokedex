@@ -11,9 +11,7 @@ h1, p, ul {
 
 ul{
   padding: 0px;
-  
 }
-
 
 .header-search {
   display: flex;
@@ -35,7 +33,7 @@ ul{
   align-items: center;
 }
 
-.flex-between{
+.flex-evenly{
   display: flex;
   justify-content: space-evenly;
 }
@@ -205,6 +203,7 @@ ul{
   padding: 1%;
   font-weight: bold;
   border-radius: 5px;
+  width: 70px;
 }
 
 .pokemon-type-container{
@@ -227,7 +226,8 @@ ul{
   height: 55vh;
   display: flex;
   flex-direction: column;
-  gap: 4%
+  gap: 5%;
+  margin-top: 5%;
 
 }
 

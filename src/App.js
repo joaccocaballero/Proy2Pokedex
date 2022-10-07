@@ -68,7 +68,7 @@ const AppRoutes = () => {
       
         />
         
-      <Route path="/:pokemonID" element= {<Card list={pokemonsList} /> } />
+      <Route path="/:pokemonID" element={<Card list={pokemonsList}/>} />
     </Routes>
 
   )

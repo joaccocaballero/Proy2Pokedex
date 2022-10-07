@@ -10,7 +10,7 @@ const Pokemon = (props) =>{
                     <div className="id">
                             <span>#{props.id}</span>    
                     </div>
-                    <img src={props.imagen}/>
+                    <img src={props.imagen} alt="img-pokemon"/>
                 </div>
                 <div className={"pokemon-name " + props.type}>
                     <span className="text-white">{props.name}</span>

@@ -3,9 +3,9 @@ import React from "react";
 const PokeType = (props)=>{
     return(
         <div>
-            <span className={props.type + " pokemon-type-card"}>
+            <div className={props.type + " pokemon-type-card flex-center-row"}>
                 {props.type}
-            </span>
+            </div>
         </div>
     )
 
