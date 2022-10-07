@@ -1,12 +1,12 @@
 import React from "react";
 
-const ProgressBar = () => {
+const ProgressBar = (props) => {
     return(
         <>
             <div className="flex-between div-progress-bar">
-                <span> 044 </span>
+                <span>{props.value}</span>
                 <div className="grey-bar">
-                    <div className="progress-bar water">.</div> 
+                    <div className={props.type} style={{width: props.value+"%", height:"10px" , border:"none", borderRadius:"5px"}}></div> 
                 </div>
                       
             </div>

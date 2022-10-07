@@ -150,7 +150,7 @@ ul{
 
 .contenedor-card {
   padding: 3%;
-  height: 95vh;
+  height: 96vh;
   color: white!important;
   border-radius: 10px;
   margin: 2px;
@@ -207,6 +207,15 @@ ul{
   border-radius: 5px;
 }
 
+.pokemon-type-container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
 .pokemon-description {
   margin: 10px 0px;
 }
@@ -216,6 +225,9 @@ ul{
   border-radius: 10px;
   padding: 15px;
   height: 55vh;
+  display: flex;
+  flex-direction: column;
+  gap: 4%
 
 }
 
@@ -241,13 +253,11 @@ ul{
  gap: 5px;
 }
 
-.div-progress-bar span{
-
- }
 .grey-bar {
   height: 10px;
   background-color: #F1F1F1;
-  width: 100%;
+  width: 90%;
+  margin-right: 5%;
   border-radius: 5px;
 }
 .water{
@@ -256,10 +266,6 @@ ul{
   color: rgb(103, 103, 238);
   width: 75%;
   border-radius: 5px;
-}
-
-.stats-tag {
-
 }
 
 

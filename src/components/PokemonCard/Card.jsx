@@ -3,7 +3,6 @@ import ProgressBar from "./ProgressBar";
 import PokeType from "./PokeType";
 
 const Card = (props) => {
-    console.log(props.selected)
     return (
         <>
             <div className={props.selected.type[0] + " contenedor-card"} >
@@ -28,13 +27,15 @@ const Card = (props) => {
 
                 <div className="pokemon-about">
                     <div className="flex-center-column">
-                        {
-                            props.selected.type.forEach((item) => {
-                                return(
-                                   <PokeType type={item.type}/>
-                                )
-                            })
-                        } 
+                        <div className="pokemon-type-container">
+                            {
+                                props.selected.type.map((item, key) => {
+                                    return (
+                                        <PokeType key={key} type={item}/>
+                                    )
+                                })
+                            } 
+                        </div>
                         <h3>About</h3>
                     </div>                  
                     
@@ -79,12 +80,12 @@ const Card = (props) => {
                         </ul>
                     </div>
                     <div className="stats-bar">
-                        <ProgressBar hp={props.selected.base.HP}/>
-                        <ProgressBar attack={props.selected.base.Attack}/>
-                        <ProgressBar defense={props.selected.base.Defense}/>
-                        <ProgressBar spa={props.selected.base.Spa}/>
-                        <ProgressBar spd={props.selected.base.Spd}/>
-                        <ProgressBar speed={props.selected.base.Speed}/>
+                        <ProgressBar value={props.selected.base.HP} type={props.selected.type[0]}/>
+                        <ProgressBar value={props.selected.base.Attack} type={props.selected.type[0]}/>
+                        <ProgressBar value={props.selected.base.Defense} type={props.selected.type[0]}/>
+                        <ProgressBar value={props.selected.base.Spa} type={props.selected.type[0]}/>
+                        <ProgressBar value={props.selected.base.Spd} type={props.selected.type[0]}/>
+                        <ProgressBar value={props.selected.base.Speed} type={props.selected.type[0]}/>
                     </div>
                 </div>
             </div>
@@ -94,3 +95,5 @@ const Card = (props) => {
 }
 
 export default Card;
+
+
