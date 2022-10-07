@@ -2,7 +2,10 @@
 import './App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
-//import {BrowserRouter, Routes, Route} from "react-router-dom";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+
 import Buscador from './components/Buscador/buscador.jsx'
 import Card from './components/PokemonCard/Card';
 
@@ -50,20 +53,35 @@ function App() {
     getPokemons()
   },[])
 
+const AppRoutes = () => {
+  return(
+    <Routes>
+      <Route path="/" element= { 
+          <Buscador
+            list={pokemonsList}
+            search={setSearchInput}
+            searchValue={searchInput}
+            filteredList={filteredPokemons}
+            iconOrder={numericOrder}
+            changeOrder={setNumOrder} 
+          />}  
+      
+        />
+        
+      <Route path="/:pokemonID" element= {<Card list={pokemonsList} /> } />
+    </Routes>
+
+  )
+}
 
   return (
-    <>
-         <Card selected={selectedPokemon}/> 
-      {/*
-        <Buscador
-        list={pokemonsList}
-        search={setSearchInput}
-        searchValue={searchInput}
-        filteredList={filteredPokemons}
-        iconOrder={numericOrder}
-        changeOrder={setNumOrder} /> 
+    <>  
+        <BrowserRouter> 
+            <AppRoutes> </AppRoutes>
+        </BrowserRouter>
+      
   
-      */}
+      
     </>
     );
 }

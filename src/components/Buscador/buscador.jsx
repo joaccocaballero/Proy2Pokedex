@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import Pokemon from "./Pokemon";
+import Pokemon from "./pokemon";
 import { useState } from "react";
 import NumericIcon from "./NumericOrder";
 import AlphabeticOrder from "./AlphabeticOrder";
@@ -7,7 +7,7 @@ import AlphabeticOrder from "./AlphabeticOrder";
 const Buscador = (props) => {
    
     const [listFiltered, setListFiltered] = useState(props.list) 
-    console.log(props.list)
+    //console.log(props.list)
 
     useEffect(()=>{
         setListFiltered(props.filteredList(props.list, props.searchValue))
@@ -35,7 +35,7 @@ const Buscador = (props) => {
            setListFiltered(alphabetic)
         }
       
-       console.log(listFiltered)
+      // console.log(listFiltered)
      
     },[props.iconOrder])
  
@@ -62,7 +62,8 @@ const Buscador = (props) => {
                     {
                         listFiltered.map((item, key) => {
                                 return (
-                                    <Pokemon name={item.name}
+                                    <Pokemon 
+                                        name={item.name}
                                         imagen={item.img}
                                         id={item.id}
                                         type={item.type[0]}

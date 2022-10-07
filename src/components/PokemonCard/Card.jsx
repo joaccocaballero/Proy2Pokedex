@@ -1,8 +1,15 @@
 import React from "react";
 import ProgressBar from "./ProgressBar";
 import PokeType from "./PokeType";
+import { useParams } from "react-router-dom";
 
 const Card = (props) => {
+    console.log(props.list)
+    const pokemonID = useParams()
+   
+    const detailPokemon = props.list.find(item => item.id === pokemonID)
+    console.log(detailPokemon)
+
     return (
         <>
             <div className={props.selected.type[0] + " contenedor-card"} >
