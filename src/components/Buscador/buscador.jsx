@@ -18,8 +18,10 @@ const Buscador = (props) => {
         if(props.iconOrder) {
             
             function SortArray(x, y){
-                if (x.id < y.id) {return -1;}
-                if (x.id > y.id) {return 1;}
+                const number1 = parseInt(x.id,10)
+                const number2 = parseInt(y.id,10)
+                if (number1 < number2) {return -1;}
+                if (number1 > number2) {return 1;}
                 return 0;
             }
            const numeric = listFiltered.sort(SortArray)
@@ -62,6 +64,7 @@ const Buscador = (props) => {
                                         name={item.name}
                                         imagen={item.img}
                                         id={item.id}
+                                        number={item.number}
                                         type={item.type[0]}
                                         key={key}
                                     />

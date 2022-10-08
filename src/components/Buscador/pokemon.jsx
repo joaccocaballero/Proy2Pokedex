@@ -7,7 +7,7 @@ const Pokemon = (props) =>{
             <Link to={`/${props.id}`} className={"pokemon-item " + props.type}> 
                 <div className="pokemon-art">
                     <div className="id">
-                            <span>#{props.id}</span>    
+                            <span>#{props.number}</span>    
                     </div>
                     <img src={props.imagen} alt="img-pokemon"/>
                 </div>

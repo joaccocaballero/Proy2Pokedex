@@ -11,18 +11,25 @@ const Card = (props) => {
 
     function getPreviousPokemon(id){
         if(id==1){
-            return ""
+            return 9
+        } else {
+            return id-1;
         }
-        return id-1;
+        
     }
 
     function getNextPokemon(id){
-        return id+1;
+        if(id+1 == 10){
+            return 1;
+        } else {
+            return id+1;
+        }
+       
     }
 
     return (
         <>
-            <div className={detailedPokemon.type[0] + " contenedor-card"} >
+            <div className={detailedPokemon.type[0] + " contenedor-card" } >
                 <header className="header-card">                
                     <div className="flex-row">
                         <Link to={"/"}>
@@ -33,9 +40,10 @@ const Card = (props) => {
 
                         <h1>{detailedPokemon.name}</h1>
                     </div>
-                    <span className="flex-row" style={{fontSize:"Large"}}>{"#"+detailedPokemon.id}</span>
+                    <span className="flex-row" style={{fontSize:"Large"}}>{"#"+ detailedPokemon.number}</span>
                 </header>
 
+                <div className="flex-center-column card-especific-pokemon">
                 <div className="flex-column pokeballBackground">
                     <div id="card-img">
                         <div className="left-frame">
@@ -79,9 +87,9 @@ const Card = (props) => {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16">
                                     <path fill="#212121" d="M14 2h-2.025C11.06.793 9.627 0 8 0 6.373 0 4.94.793 4.025 2H2C.897 2 0 2.897 0 4v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2ZM8 1a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm7 13a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h1.424A4.959 4.959 0 0 0 3 5c0 2.757 2.243 5 5 5s5-2.243 5-5a4.96 4.96 0 0 0-.424-2H14a1 1 0 0 1 1 1v10ZM8 8a1.494 1.494 0 0 0 1.014-2.598l.945-2.205a.5.5 0 1 0-.919-.394L8.095 5.01C6.987 4.938 6.5 5.895 6.5 6.5 6.5 7.327 7.173 8 8 8Zm0-2a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1Z" />
                                 </svg>
-                                <span>{detailedPokemon.weight}</span>
+                                <span className="span-weight">{detailedPokemon.weight}</span>
                             </div>
-                            <span className="bold"> Weight</span>
+                            <span className="bold "> Weight</span>
                         </div>
 
                         <div className="pokemon-height flex-center-column">
@@ -122,7 +130,8 @@ const Card = (props) => {
                         <ProgressBar value={detailedPokemon.base.Speed} type={detailedPokemon.type[0]}/>
                     </div>
                 </div>
-            </div>
+                </div>
+                </div>
         </div>
         </>
     )

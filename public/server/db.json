@@ -2,6 +2,7 @@
     "pokemons":[
         {
             "id": 1,
+            "number": "001",
             "img": "./images/bulbasaur.png",
             "name":"Bulbasaur",
             "weight": "6,9 Kg",
@@ -23,6 +24,7 @@
         },
         {
             "id": 2,
+            "number": "004",
             "img": "./images/charmander.png",
             "name":"Charmander",
             "weight": "8,5 Kg",
@@ -44,6 +46,7 @@
         {
             "id": 3,
             "img": "./images/squirtle.png",
+            "number": "007",
             "name":"Squirtle",
             "weight": "9,0 Kg",
             "height": "0,5m",
@@ -64,6 +67,7 @@
         {
             "id": 4,
             "img": "./images/butterfree.png",
+            "number": "012",
             "name":"Butterfree",
             "weight": "32,0 Kg",
             "height": "1,1m",
@@ -84,6 +88,7 @@
         },
         {
             "id": 5,
+            "number": "029",
             "img": "././images/pikachu.png",
             "name":"Pikachu",
             "weight": "6,0 Kg",
@@ -104,6 +109,7 @@
         },
         {
             "id": 6,
+            "number": "082",
             "img": "././images/gastly.png",
             "name":"Gastly",
             "weight": "0,1 Kg",
@@ -125,6 +131,7 @@
         },
         {
             "id": 7,
+            "number": "132",
             "img": "././images/ditto.png",
             "name": "Ditto",
             "weight": "4,0 Kg",
@@ -145,6 +152,7 @@
         },
         {
             "id": 8,
+            "number": "152",
             "img": "././images/mew.png",
             "name": "Mew",
             "weight": "4,0 Kg",
@@ -165,6 +173,7 @@
         },
         {
             "id": 9,
+            "number": "304",
             "img": "././images/aron.png",
             "name": "Aron",
             "weight": "60,0 Kg",
