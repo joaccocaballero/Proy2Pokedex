@@ -156,7 +156,7 @@ ul{
   color: white!important;
   border-radius: 10px;
   margin: 2px;
-  height: 100vh;
+  height: 96vh;
 }
 .header-card{
   display: flex;
@@ -389,8 +389,13 @@ ul{
 }
 
 @media (min-width: 450px) {
+  body,html{
+    height: 90vh;
+  }
+  
+  
   .contenedor-card{
-    height: 100vh;
+    height: 86vh;
   }
   .search-container{
     display: flex;
@@ -407,6 +412,17 @@ ul{
   .pokemons-container {
     width: 50%;
   }
+  .left-frame {
+    position: fixed;
+    left: 25%;
+    top: 25%;
+  }
+
+  .right-frame {
+    position: fixed;
+    top: 25%;
+    right: 25%;
+  }
   .pokemons-stats {
     background-color: none;
   }
@@ -414,39 +430,31 @@ ul{
     margin-top: 6%;
     margin-bottom: 2%;
   }
- .pokemon-about{
-  width: 60%;
-  height: 80%;
- }
- #card-img > .pokeball-img {
-  margin-left: 30%;
- }
- #card-img, .pokeball-img {
-  margin-left: 30%;
- }
- .right-frame {
-  height: 30px;
- }
- .card-especific-pokemon{
- 
- }
-#card-img > img {
-  position: absolute;
-
-}
-.pokeball-img {
-  height: 30vh
- 
-
-}
-.pok-card-img{
-  height: 40vh;
- 
-}
-#card-img > .pokeball-img {
-  position: absolute;
-
-}
+  .pokemon-about{
+    width: 60%;
+    height: 80%;
+  }
+  #card-img > .pokeball-img {
+    margin-left: 30%;
+  }
+  #card-img, .pokeball-img {
+    margin-left: 30%;
+  }
+  .right-frame {
+    height: 30px;
+  }
+  #card-img > img {
+    position: absolute;
+  }
+  .pokeball-img {
+    height: 30vh
+  }
+  .pok-card-img{
+  height: 40vh; 
+  }
+  #card-img > .pokeball-img {
+    position: absolute;
+  }
 
 }
 

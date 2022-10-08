@@ -14,9 +14,7 @@ const Buscador = (props) => {
     },[props.searchValue,props.list])
 
     useEffect(()=>{
-        
         if(props.iconOrder) {
-            
             function SortArray(x, y){
                 const number1 = parseInt(x.id,10)
                 const number2 = parseInt(y.id,10)
@@ -37,7 +35,6 @@ const Buscador = (props) => {
         }   
     },[props.iconOrder])
  
-    
     return (
         <>
             <div className="search-container">
@@ -55,7 +52,7 @@ const Buscador = (props) => {
                         </svg>
                     </div>
                 </header>
-                <input className="searcher" type="text" placeholder="Buscar" onFocus="this.placeholder = ''" onChange={(e)=>props.search(e.target.value)} />
+                <input value={props.searchValue} className="searcher" type="text" placeholder="Buscar" onChange={(e)=>props.search(e.target.value)}/>
                 <div className="pokemons-container">              
                     {
                         listFiltered.map((item, key) => {
