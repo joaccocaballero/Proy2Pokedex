@@ -125,9 +125,11 @@ ul{
   align-items: center;
   margin-bottom: 4%;
 }
+
+
 .pokemon-art > img {
-  max-width: 80%;
-  min-height: 80%;
+  max-width: 90%;
+  max-height: 90%;
 }
 
 .pokemon-name {
@@ -280,14 +282,6 @@ ul{
   margin-right: 5%;
   border-radius: 5px;
 }
-.water{
-  height: 10px;
-  background-color: rgb(103, 103, 238);
-  color: rgb(103, 103, 238);
-  width: 75%;
-  border-radius: 5px;
-}
-
 
 .stats-tag li {
   list-style: none;
@@ -295,94 +289,95 @@ ul{
 
 
 .id{ 
-  font-size: 10px;
-  margin-left: 80%;
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 85%;
 }
 
 
-.Rock {
+.rock {
   background-color: #B69E31;
   color: #B69E31;
   border: 2px solid #B69E31;
 }
-.Fire{
+.fire{
   background-color: #F57D31;
   color: #F57D31;
   border: 2px solid #F57D31;
 }
-.Water{
+.water{
   background-color: #6493EB;
   color: #6493EB;
   border: 2px solid #6493EB;
 }
-.Bug{
+.bug{
   background-color: #A7B723;
   color: #A7B723;
   border: 2px solid #A7B723;
 }
-.Electric{
+.electric{
   background-color: #F9CF30;
   color: #F9CF30;
   border: 2px solid #F9CF30;
 }
-.Ghost{
+.ghost{
   background-color: #70559B;
   color: #70559B;
   border: 2px solid #70559B;
 }
-.Steel{
+.steel{
   background-color: #B7B9D0;
   color: #B7B9D0;
   border: 2px solid #B7B9D0;
 }
-.Grass{
+.grass{
   background-color:  #74CB48;
   color: #74CB48;
   border: 2px solid #74CB48;
 }
-.Dark{
+.dark{
   background-color:  #75574C;
   color: #75574C;
   border: 2px solid #75574C;
 }
-.Fairy{
+.fairy{
   background-color:  #E69EAC;
   color: #E69EAC;
   border: 2px solid #E69EAC;
 }
-.Normal{
+.normal{
   background-color:  #AAA67F;
   color: #AAA67F;
   border: 2px solid #AAA67F;
 }
 
-.Fighting{
+.fighting{
   background-color:  #C12239;
   color: #C12239;
   border: 2px solid #C12239;
 }
-.Flying{
+.flying{
   background-color:  #A891EC;
   color: #A891EC;
   border: 2px solid #A891EC;
 }
-.Poison{
+.poison{
   background-color:  #A43E9E;
   color: #A43E9E;
   border: 2px solid #A43E9E;
 }
-.Ground{
+.ground{
   background-color:  #DEC16B;
   color: #DEC16B;
   border: 2px solid #DEC16B;
 }
-.Dragon{
+.dragon{
   background-color:  #7037FF;
   color: #7037FF;
   border: 2px solid #7037FF;
 }
 
-.Psychic{
+.psychic{
   background-color: #FB5584;
   color: #FB5584;
   border: 2px solid #FB5584;

@@ -10,26 +10,27 @@ const Card = (props) => {
     const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
 
     function getPreviousPokemon(id){
-        if(id==1){
-            return 9
+        const getPreviousId = props.list.findIndex((item) => item.id == params.pokemonID) - 1
+        if(getPreviousId==0){
+            return props.list.length
         } else {
-            return id-1;
-        }
-        
+            return getPreviousId
+        }  
     }
 
     function getNextPokemon(id){
-        if(id+1 == 10){
-            return 1;
+        const getNextId = props.list.findIndex((item) => item.id == params.pokemonID) + 1
+        if(getNextId == props.list.length){
+            return 0;
         } else {
-            return id+1;
+            return getNextId
         }
        
     }
 
     return (
         <>
-            <div className={detailedPokemon.type[0] + " contenedor-card" } >
+            <div className={detailedPokemon.types[0].type.name + " contenedor-card" } >
                 <header className="header-card">                
                     <div className="flex-row">
                         <Link to={"/"}>
@@ -40,7 +41,7 @@ const Card = (props) => {
 
                         <h1>{detailedPokemon.name}</h1>
                     </div>
-                    <span className="flex-row" style={{fontSize:"Large"}}>{"#"+ detailedPokemon.number}</span>
+                    <span className="flex-row" style={{fontSize:"Large"}}>{"#"+ detailedPokemon.id}</span>
                 </header>
 
                 <div className="flex-center-column card-especific-pokemon">
@@ -54,7 +55,7 @@ const Card = (props) => {
                             </Link>
                         </div>
                         <img className="pokeball-img" src="./images/Pokeball.png" alt="imagen pokeball" />
-                        <img className="pok-card-img" src={detailedPokemon.img} alt="imagen del pokemon" />
+                            <img className="pok-card-img" src={detailedPokemon.sprites.other['official-artwork']['front_default']} alt="imagen del pokemon" />
                         <div className="right-frame">
                             <Link to={"/" + getNextPokemon(detailedPokemon.id)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" fill="none" viewBox="0 0 8 16">
@@ -71,9 +72,9 @@ const Card = (props) => {
                     <div className="flex-center-column">
                         <div className="pokemon-type-container">
                             {
-                                detailedPokemon.type.map((item, key) => {
+                                detailedPokemon.types.map((item, key) => {
                                     return (
-                                        <PokeType key={key} type={item}/>
+                                        <PokeType key={key} type={item.type.name}/>
                                     )
                                 })
                             } 
@@ -87,7 +88,7 @@ const Card = (props) => {
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 16 16">
                                     <path fill="#212121" d="M14 2h-2.025C11.06.793 9.627 0 8 0 6.373 0 4.94.793 4.025 2H2C.897 2 0 2.897 0 4v10c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2V4c0-1.103-.897-2-2-2ZM8 1a4 4 0 1 1 0 8 4 4 0 0 1 0-8Zm7 13a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h1.424A4.959 4.959 0 0 0 3 5c0 2.757 2.243 5 5 5s5-2.243 5-5a4.96 4.96 0 0 0-.424-2H14a1 1 0 0 1 1 1v10ZM8 8a1.494 1.494 0 0 0 1.014-2.598l.945-2.205a.5.5 0 1 0-.919-.394L8.095 5.01C6.987 4.938 6.5 5.895 6.5 6.5 6.5 7.327 7.173 8 8 8Zm0-2a.5.5 0 1 1 0 1 .5.5 0 0 1 0-1Z" />
                                 </svg>
-                                <span className="span-weight">{detailedPokemon.weight}</span>
+                                    <span className="span-weight">{detailedPokemon.weight + 'Kg'} </span>
                             </div>
                             <span className="bold "> Weight</span>
                         </div>
@@ -97,13 +98,22 @@ const Card = (props) => {
                                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 8 16">
                                     <path fill="#212121" d="M7 0H1a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1ZM1 15V1h6v2H5.25a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25H7v2H5.25a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25H7v2H5.25a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25H7v2H5.25a.25.25 0 0 0-.25.25v.5c0 .138.112.25.25.25H7v2H1Z" />
                                 </svg>
-                                <span>{detailedPokemon.height}</span>
+                                <span>{detailedPokemon.height + 'm'}</span>
                             </div>
                             <span className="bold">Height</span>
                         </div>
 
                         <div className="pokemon-moves flex-center-column">
-                            <p>{detailedPokemon.moves}</p>
+                            {
+                                detailedPokemon.moves.map((item,key) => {
+                                    if (key>=2){
+                                        return false;
+                                    }
+                                    return (
+                                        <p>{item.move}</p>
+                                    )
+                                })
+                            }
                             <span className="bold">Moves</span>
                         </div>
 

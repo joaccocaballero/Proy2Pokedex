@@ -9,15 +9,16 @@ import Card from './components/PokemonCard/Card';
 
 function App() {
   const [pokemonsList, setPokemonsList] = useState([]) 
+  const normalList = []
 
-  const getPokemons = () => {
-    fetch("http://localhost:4000/pokemons")
+  const getPokemons = async () => {
+    for (let index = 1; index < 25 ; index++){
+      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${index}/`)
       .then(response => response.json())
-      .then(data => {
-        setPokemonsList(data)
-      })
+      normalList.push(res)
+    }
+    setPokemonsList(normalList)
   }
-
 
   useEffect(()=>{
     getPokemons()
@@ -30,7 +31,6 @@ const AppRoutes = () => {
           <Buscador
             list={pokemonsList}
           />}  
-      
         />  
       <Route path="/:pokemonID" element={<Card list={pokemonsList}/>} />
     </Routes>

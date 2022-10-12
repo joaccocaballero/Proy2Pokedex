@@ -5,19 +5,18 @@ import NumericIcon from "./NumericOrder";
 import AlphabeticOrder from "./AlphabeticOrder";
 
 const Buscador = (props) => {
-
+    console.log(props.list)
     const [searchInput, setSearchInput] = useState("")
     const [numericOrder, setNumOrder] = useState(false)
-    const [listFiltered, setListFiltered] = useState(props.list) 
-
+    const [listFiltered, setListFiltered] = useState(props.list)
+  
     useEffect(()=>{
         setListFiltered(filteredPokemons(props.list))
-     
     },[searchInput,props.list])
 
     const filteredPokemons = (pokemonsList) => {
-        return props.list.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
-    }
+        return pokemonsList.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
+    } 
 
     function sortByTrash(x, y) {
         const number1 = parseInt(x.id, 10)
@@ -34,9 +33,7 @@ const Buscador = (props) => {
     }
 
     useEffect(()=>{
-
         const filtered = numericOrder ? listFiltered.sort(sortByTrash) : listFiltered.sort(SortByName)
-
         setListFiltered(filtered)
     },[numericOrder])
  
@@ -64,10 +61,9 @@ const Buscador = (props) => {
                                 return (
                                     <Pokemon 
                                         name={item.name}
-                                        imagen={item.img}
-                                        id={item.id}
-                                        number={item.number}
-                                        type={item.type[0]}
+                                        type={item.types}
+                                        number={item.id}
+                                        img={item.sprites.other['official-artwork']['front_default']}
                                         key={key}
                                     />
                                 )
@@ -76,7 +72,6 @@ const Buscador = (props) => {
 
                 </div>
             </div>
-
         </>
     )
 }

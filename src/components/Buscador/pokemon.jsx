@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 const Pokemon = (props) =>{
     return(
         <>     
-            <Link to={`/${props.id}`} className={"pokemon-item " + props.type}> 
+            <Link to={`/${props.id}`} className={"pokemon-item " + props.type[0].type.name}> 
                 <div className="pokemon-art">
                     <div className="id">
                             <span>#{props.number}</span>    
                     </div>
-                    <img src={props.imagen} alt="img-pokemon"/>
+                    <img src={props.img} alt="img-pokemon"/>
                 </div>
-                <div className={"pokemon-name " + props.type}>
+                <div className={"pokemon-name " + props.type[0].type.name}>
                     <span className="text-white">{props.name}</span>
                 </div>
             </Link>
