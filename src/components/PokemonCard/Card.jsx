@@ -7,8 +7,10 @@ import { Route } from "react-router-dom";
 
 const Card = (props) => {
     const params = useParams()
+    console.log(props.list)
+    //
     const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
-
+    
     function getPreviousPokemon(id){
         const getPreviousId = props.list.findIndex((item) => item.id == params.pokemonID) - 1
         if(getPreviousId==0){

@@ -5,7 +5,6 @@ import NumericIcon from "./NumericOrder";
 import AlphabeticOrder from "./AlphabeticOrder";
 
 const Buscador = (props) => {
-    console.log(props.list)
     const [searchInput, setSearchInput] = useState("")
     const [numericOrder, setNumOrder] = useState(false)
     const [listFiltered, setListFiltered] = useState(props.list)

@@ -12,12 +12,13 @@ function App() {
   const normalList = []
 
   const getPokemons = async () => {
-    for (let index = 1; index < 25 ; index++){
-      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${index}/`)
-      .then(response => response.json())
+    for (let index = 1; index < 20 ; index++){
+      const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${index}/`).then(response => response.json())
+      console.log(res)
       normalList.push(res)
     }
     setPokemonsList(normalList)
+    console.log(pokemonsList)
   }
 
   useEffect(()=>{
@@ -32,7 +33,11 @@ const AppRoutes = () => {
             list={pokemonsList}
           />}  
         />  
-      <Route path="/:pokemonID" element={<Card list={pokemonsList}/>} />
+      <Route path="/:pokemonID" 
+            element= 
+            {
+                <Card list={pokemonsList}/>} 
+            />
     </Routes>
 
   )
