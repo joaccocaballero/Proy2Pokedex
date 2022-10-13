@@ -7,31 +7,33 @@ import { Route } from "react-router-dom";
 
 const Card = (props) => {
     const params = useParams()
-    
-    console.log(props.descriptions)
+
     const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
+    console.log(props.list)
+    console.log(detailedPokemon)
+
     function getPreviousPokemon(id){
-        const getPreviousId = props.list.findIndex((item) => item.id == params.pokemonID) - 1
-        if(getPreviousId==0){
+        const getPreviousIndex = props.list.findIndex((item) => item.id == params.pokemonID)
+        if(getPreviousIndex == 0){
             return props.list.length
         } else {
-            return getPreviousId
+            return getPreviousIndex - 1
         }  
     }
 
     function getNextPokemon(id){
-        const getNextId = props.list.findIndex((item) => item.id == params.pokemonID) + 1
-        if(getNextId == props.list.length){
+        const getNextIndex = props.list.findIndex((item) => item.id == params.pokemonID) + 1
+        if(getNextIndex == props.list.length){
             return 0;
         } else {
-            return getNextId
+            return getNextIndex
         }
        
     }
 
     return (
         <>
-            <div className={detailedPokemon.types[0].type.name + " contenedor-card" } >
+            <div className={detailedPokemon.type[0] + " contenedor-card" } >
                 <header className="header-card">                
                     <div className="flex-row">
                         <Link to={"/"}>
@@ -56,7 +58,7 @@ const Card = (props) => {
                             </Link>
                         </div>
                         <img className="pokeball-img" src="./images/Pokeball.png" alt="imagen pokeball" />
-                            <img className="pok-card-img" src={detailedPokemon.sprites.other['official-artwork']['front_default']} alt="imagen del pokemon" />
+                            <img className="pok-card-img" src={detailedPokemon.img} alt="imagen del pokemon" />
                         <div className="right-frame">
                             <Link to={"/" + getNextPokemon(detailedPokemon.id)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" fill="none" viewBox="0 0 8 16">
@@ -73,9 +75,9 @@ const Card = (props) => {
                     <div className="flex-center-column">
                         <div className="pokemon-type-container">
                             {
-                                detailedPokemon.types.map((item, key) => {
+                                detailedPokemon.type.map((item, key) => {
                                     return (
-                                        <PokeType key={key} type={item.type.name}/>
+                                        <PokeType key={key} type={item}/>
                                     )
                                 })
                             } 
@@ -107,11 +109,8 @@ const Card = (props) => {
                         <div className="pokemon-moves flex-center-column">
                             {
                                 detailedPokemon.moves.map((item,key) => {
-                                    if (key>=2){
-                                        return false;
-                                    }
                                     return (
-                                        <p>{item.move}</p>
+                                        <p key={key}>{item}</p>
                                     )
                                 })
                             }
@@ -133,12 +132,12 @@ const Card = (props) => {
                         </ul>
                     </div>
                     <div className="stats-bar">
-                        <ProgressBar value={detailedPokemon.stats[0]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
-                        <ProgressBar value={detailedPokemon.stats[1]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
-                        <ProgressBar value={detailedPokemon.stats[2]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
-                        <ProgressBar value={detailedPokemon.stats[3]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
-                        <ProgressBar value={detailedPokemon.stats[4]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
-                        <ProgressBar value={detailedPokemon.stats[6]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
+                        <ProgressBar value={detailedPokemon.base.HP} type={detailedPokemon.type[0]}/>
+                        <ProgressBar value={detailedPokemon.base.Attack} type={detailedPokemon.type[0]}/>
+                        <ProgressBar value={detailedPokemon.base.Defense} type={detailedPokemon.type[0]}/>
+                        <ProgressBar value={detailedPokemon.base.Spa} type={detailedPokemon.type[0]}/>
+                        <ProgressBar value={detailedPokemon.base.Spd} type={detailedPokemon.type[0]}/>
+                        <ProgressBar value={detailedPokemon.base.Speed} type={detailedPokemon.type[0]}/>
                     </div>
                 </div>
                 </div>

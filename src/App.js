@@ -9,7 +9,6 @@ import Card from './components/PokemonCard/Card';
 
 function App() {
   const [pokemonsList, setPokemonsList] = useState([]) 
-  const [pokemonsDescription, setDescriptionList] = useState([])
  
   const getPokemons = async () => {
     let promises = [];
@@ -20,10 +19,10 @@ function App() {
     
           return promises.push({
             "id": response.id,
-            "number": "001",
             "img": response.sprites.other['official-artwork']['front_default'],
             "name":response.name,
-            "weight":response.height,
+            "height": response.height,
+            "weight":response.weight,
             "moves": response.moves.slice(0,2).map((move)=>move.move.name),
             "type": response.types.map((type)=>type.type.name),
             "base": {
@@ -44,35 +43,9 @@ function App() {
         .then((response) => {
           const description = response["flavor_text_entries"][0]["flavor_text"]
           poke.description = description;
-          // console.log([...promises, promises.description = description ])
     })})
     setPokemonsList(promises)
-    /*for (let index = 1; index < 21 ; index++){
-      promises.push(Promise.resolve(
-        fetch(`https://pokeapi.co/api/v2/pokemon-species/${index}`)
-        .then((response) => response.json())
-        .then((response) => {
-          const description = response["flavor_text_entries"][0]["flavor_text"]
-          promises.description = description;
-          // console.log([...promises, promises.description = description ])
-          console.log(promises)
-          return promises
-        
-        })
-      ));
-
-    }
-    /*console.log(promises)
-    Promise.all([promises]).then(responses => {
-      responses.forEach(response => {
-        console.log(response);
-        
-      })
-    });*/
-
   }
-
-
 
   useEffect(()=>{
     getPokemons()
@@ -81,30 +54,16 @@ function App() {
 const AppRoutes = () => {
   return(
     <Routes>
-      <Route path="/" element= { 
-          <Buscador
-            list={pokemonsList}
-          />}  
-        />  
-      <Route path="/:pokemonID" element= 
-            {
-                <Card 
-                      list={pokemonsList}
-                      descriptions={pokemonsDescription}
-                />
-            } 
-            />
+      <Route path="/" element= {<Buscador list={pokemonsList}/>}/>  
+      <Route path="/:pokemonID" element= {<Card list={pokemonsList}/>}/>
     </Routes>
-
   )
 }
-
   return (
     <>  
         <BrowserRouter> 
             <AppRoutes> </AppRoutes>
         </BrowserRouter>
-      
     </>
     );
 }
