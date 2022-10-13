@@ -60,9 +60,9 @@ const Buscador = (props) => {
                                 return (
                                     <Pokemon 
                                         name={item.name}
-                                        type={item.types}
+                                        type={item.type}
                                         number={item.id}
-                                        img={item.sprites.other['official-artwork']['front_default']}
+                                        img={item.img}
                                         key={key}
                                     />
                                 )

@@ -7,10 +7,9 @@ import { Route } from "react-router-dom";
 
 const Card = (props) => {
     const params = useParams()
-    console.log(props.list)
-    //
-    const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
     
+    console.log(props.descriptions)
+    const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
     function getPreviousPokemon(id){
         const getPreviousId = props.list.findIndex((item) => item.id == params.pokemonID) - 1
         if(getPreviousId==0){
@@ -134,12 +133,12 @@ const Card = (props) => {
                         </ul>
                     </div>
                     <div className="stats-bar">
-                        <ProgressBar value={detailedPokemon.base.HP} type={detailedPokemon.type[0]}/>
-                        <ProgressBar value={detailedPokemon.base.Attack} type={detailedPokemon.type[0]}/>
-                        <ProgressBar value={detailedPokemon.base.Defense} type={detailedPokemon.type[0]}/>
-                        <ProgressBar value={detailedPokemon.base.Spa} type={detailedPokemon.type[0]}/>
-                        <ProgressBar value={detailedPokemon.base.Spd} type={detailedPokemon.type[0]}/>
-                        <ProgressBar value={detailedPokemon.base.Speed} type={detailedPokemon.type[0]}/>
+                        <ProgressBar value={detailedPokemon.stats[0]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
+                        <ProgressBar value={detailedPokemon.stats[1]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
+                        <ProgressBar value={detailedPokemon.stats[2]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
+                        <ProgressBar value={detailedPokemon.stats[3]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
+                        <ProgressBar value={detailedPokemon.stats[4]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
+                        <ProgressBar value={detailedPokemon.stats[6]["base_stat"]} type={detailedPokemon.types[0].type.name}/>
                     </div>
                 </div>
                 </div>
