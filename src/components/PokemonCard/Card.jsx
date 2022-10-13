@@ -9,26 +9,26 @@ const Card = (props) => {
     const params = useParams()
 
     const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
+    console.log(params)
     console.log(props.list)
     console.log(detailedPokemon)
 
-    function getPreviousPokemon(id){
-        const getPreviousIndex = props.list.findIndex((item) => item.id == params.pokemonID)
-        if(getPreviousIndex == 0){
+    function getPreviousPokemon(id){ //orden numerico
+        const getIndex = props.list.findIndex((item) => item.id == params.pokemonID)
+        if(getIndex == 0){
             return props.list.length
         } else {
-            return getPreviousIndex - 1
+            return id-1
         }  
     }
 
     function getNextPokemon(id){
-        const getNextIndex = props.list.findIndex((item) => item.id == params.pokemonID) + 1
-        if(getNextIndex == props.list.length){
-            return 0;
-        } else {
-            return getNextIndex
+        const getIndex = props.list.findIndex((item) => item.id == params.pokemonID)
+        if(getIndex + 1 == props.list.length){
+            return 1;
+        }else {
+           return id+1
         }
-       
     }
 
     return (
@@ -70,7 +70,6 @@ const Card = (props) => {
                     </div>    
                 </div>
                 
-
                 <div className="pokemon-about">
                     <div className="flex-center-column">
                         <div className="pokemon-type-container">

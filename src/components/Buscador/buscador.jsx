@@ -6,7 +6,7 @@ import AlphabeticOrder from "./AlphabeticOrder";
 
 const Buscador = (props) => {
     const [searchInput, setSearchInput] = useState("")
-    const [numericOrder, setNumOrder] = useState(false)
+    const [numericOrder, setNumOrder] = useState(true)
     const [listFiltered, setListFiltered] = useState(props.list)
     
     function sortByTrash(x, y) {

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Pokemon = (props) =>{
+    console.log(props.key)
     return(
         <>     
             <Link to={`/${props.number}`} className={"pokemon-item " + props.type[0]}> 
