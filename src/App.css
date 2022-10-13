@@ -1,11 +1,14 @@
 
 body,html{
-  height: 95vh;
   margin: 0px;
   padding: 0px;
   background-color: #F7F7F7;
 }
 
+#root{
+  width: 100%;
+  height: 100%;
+}
 h1, p, ul {
   margin: 0px;
 }
@@ -198,7 +201,9 @@ ul{
 }
 
 #card-img>.pok-card-img {
-  margin-left: 25%;
+  margin-left: 16%;
+  max-width: 70%;
+  max-height: 70%;
 }
 
 .left-frame{
@@ -291,7 +296,7 @@ ul{
 .id{ 
   font-size: 12px;
   font-weight: bold;
-  margin-left: 85%;
+  margin-left: 75%;
 }
 
 
@@ -391,6 +396,7 @@ ul{
   
   .contenedor-card{
     height: 86vh;
+    width: 100%;
   }
   .search-container{
     display: flex;

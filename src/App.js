@@ -12,7 +12,7 @@ function App() {
  
   const getPokemons = async () => {
     let promises = [];
-    for (let index = 1; index < 21 ; index++){
+    for (let index = 1; index < 249 ; index++){
       await fetch(`https://pokeapi.co/api/v2/pokemon/${index}`)
         .then((response) => response.json())
         .then((response) => {
@@ -20,7 +20,7 @@ function App() {
           return promises.push({
             "id": response.id,
             "img": response.sprites.other['official-artwork']['front_default'],
-            "name":response.name,
+            "name": response.name,
             "height": response.height,
             "weight":response.weight,
             "moves": response.moves.slice(0,2).map((move)=>move.move.name),

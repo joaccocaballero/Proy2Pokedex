@@ -4,6 +4,7 @@ import PokeType from "./PokeType";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Route } from "react-router-dom";
+import { addZero, toPascalCase } from "../../helpers/helper";
 
 const Card = (props) => {
     const params = useParams()
@@ -42,9 +43,9 @@ const Card = (props) => {
                             </svg>
                         </Link>
 
-                        <h1>{detailedPokemon.name}</h1>
+                        <h1>{toPascalCase(detailedPokemon.name)}</h1>
                     </div>
-                    <span className="flex-row" style={{fontSize:"Large"}}>{"#"+ detailedPokemon.id}</span>
+                    <span className="flex-row" style={{fontSize:"Large"}}>{"#"+ addZero(detailedPokemon.id, 3)}</span>
                 </header>
 
                 <div className="flex-center-column card-especific-pokemon">
