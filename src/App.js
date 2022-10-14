@@ -36,7 +36,6 @@ function App() {
           });
         })
     }
-    console.log(promises)
     promises.forEach((poke)=>{
       fetch(`https://pokeapi.co/api/v2/pokemon-species/${poke.id}`)
         .then((response) => response.json())

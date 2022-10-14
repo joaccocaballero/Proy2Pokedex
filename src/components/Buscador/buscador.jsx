@@ -25,7 +25,7 @@ const Buscador = (props) => {
 
     useEffect(() => {
         const filtered = numericOrder ? listFiltered.sort(sortByTrash) : listFiltered.sort(SortByName)
-        setListFiltered(filtered)
+        setListFiltered(Object.assign([], filtered))
         console.log(listFiltered)
     }, [numericOrder])
   

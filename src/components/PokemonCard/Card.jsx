@@ -3,16 +3,20 @@ import ProgressBar from "./ProgressBar";
 import PokeType from "./PokeType";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { Route } from "react-router-dom";
 import { addZero, toPascalCase } from "../../helpers/helper";
+import { useState } from "react";
+import { useEffect } from "react";
+import LoadingCard from "../Buscador/loader";
+
+
 
 const Card = (props) => {
+    const array = []
+    //const [detailedPokemon, setdetailedPokemon] = useState([]) 
     const params = useParams()
-
     const detailedPokemon = props.list.find((item) => item.id == params.pokemonID)
-    console.log(params)
-    console.log(props.list)
-    console.log(detailedPokemon)
+
+    
 
     function getPreviousPokemon(id){ //orden numerico
         const getIndex = props.list.findIndex((item) => item.id == params.pokemonID)
@@ -34,6 +38,9 @@ const Card = (props) => {
 
     return (
         <>
+            {
+                ( !detailedPokemon ) ? <LoadingCard  /> : 
+           
             <div className={detailedPokemon.type[0] + " contenedor-card" } >
                 <header className="header-card">                
                     <div className="flex-row">
@@ -143,8 +150,10 @@ const Card = (props) => {
                 </div>
                 </div>
         </div>
-        </>
+        }
+    </>
     )
+    
 }
 
 export default Card;
