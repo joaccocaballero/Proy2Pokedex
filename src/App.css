@@ -157,13 +157,15 @@ ul{
   width: 100%;
 }
 .div-poke-name{
+  display: flex;
+  align-items: center;
+  gap:10px;
   width: 250px;
 }
 .pokemon-name span{
   color: white;
   font-size: small;
 }
-
 
 .stats-tag{
   border-right: 0.5px solid rgb(214, 211, 211);
@@ -182,14 +184,14 @@ ul{
 
 }
 .header-card{
-  width: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 .card-especific-pokemon{
   
   margin: 0 auto;
-  margin: 80px 0px 120px 0px;
+  margin: 5% 0px 120px 0px;
 }
 
 .flex-row{
@@ -238,13 +240,13 @@ ul{
 .left-frame{
   position: absolute;
  left: 10px;
-  top: 18%;
+  top: 20%;
 }
 
 .right-frame{
   right: 10px;
   position: absolute;
-  top:18%;
+  top:20%;
 
 }
 
@@ -260,11 +262,9 @@ ul{
 }
 
 .pokemon-type-container{
-
   gap: 15px;
   width: 100%;
-  
-  
+  margin-bottom: 5%;
 }
 
 .pokemon-description {
@@ -273,14 +273,13 @@ ul{
 }
 .pokemon-about{
 
- 
   background-color: white;
   color: black;
   border-radius: 10px;
   padding: 15px;
   display: flex;
   flex-direction: column;
-  gap: 5%;
+  gap: 15px;
 }
 
 .pokemon-weight, .pokemon-height, .pokemon-moves {
@@ -502,18 +501,12 @@ ul{
     height: 90vh;
   }
   .card-especific-pokemon{
-
     max-height: 600px;
     margin-bottom: 250px;
   }
-  
   .loader img {
     width: 200px;
     height: 150px;
-  }
-  .contenedor-card{
- 
-  
   }
   .search-container{
     display: flex;
@@ -546,24 +539,17 @@ ul{
     background-color: none;
   }
   .pokemon-type-container{
-    margin-top: 6%;
+    margin-top: 3%;
     margin-bottom: 2%;
   }
   .pokemon-about{
- 
-
+    display: flex;
     width: 45%;
-
+    gap:8px;
   }
-
-  #card-img {
-  
-  }
-  #card-img > .pokeball-img {
-    /*margin-left: 30%;
-*/  }
-  #card-img, .pokeball-img {
-    /*margin-left: 30%;*/
+  .pokemon-type-card{
+    margin-top:1%;
+    margin-bottom: 2%;
   }
   .right-frame {
     height: 30px;

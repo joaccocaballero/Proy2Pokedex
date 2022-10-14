@@ -3,8 +3,9 @@ import './App.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Buscador from './components/Buscador/buscador.jsx'
+import Buscador from './components/Buscador/Buscador.jsx'
 import Card from './components/PokemonCard/Card';
+import LoadingCard from './components/Buscador/LoadingCard';
 
 
 function App() {
@@ -59,10 +60,15 @@ const AppRoutes = () => {
   )
 }
   return (
-    <>  
-        <BrowserRouter> 
-            <AppRoutes> </AppRoutes>
+    <> 
+      {
+        (!pokemonsList) ? <LoadingCard /> : 
+        
+        <BrowserRouter>
+          <AppRoutes> </AppRoutes>
         </BrowserRouter>
+      }
+        
     </>
     );
 }

@@ -1,45 +1,37 @@
 import React, {useEffect} from "react";
-import Pokemon from "./pokemon";
+import Pokemon from "./Pokemon";
 import { useState } from "react";
 import NumericIcon from "./NumericOrder";
 import AlphabeticOrder from "./AlphabeticOrder";
+import LoadingCard from "./LoadingCard";
+import { sortByTrash, sortByName, filteredPokemons } from "../../helpers/helper";
 
 const Buscador = (props) => {
     const [searchInput, setSearchInput] = useState("")
     const [numericOrder, setNumOrder] = useState(true)
     const [listFiltered, setListFiltered] = useState(props.list)
+    const isLoading = props.list[0]
     
-    function sortByTrash(x, y) {
-        const number1 = parseInt(x.id, 10)
-        const number2 = parseInt(y.id, 10)
-        if (number1 < number2) {return -1;}
-        if (number1 > number2) {return 1;}
-        return 0;
-    }
-
-    function SortByName(x, y) {
-        if (x.name < y.name) {return -1;}
-        if (x.name > y.name) {return 1;}
-        return 0;
-    }
-
     useEffect(() => {
-        const filtered = numericOrder ? listFiltered.sort(sortByTrash) : listFiltered.sort(SortByName)
+        const filtered = numericOrder ? listFiltered.sort(sortByTrash) : listFiltered.sort(sortByName)
         setListFiltered(Object.assign([], filtered))
-        console.log(listFiltered)
     }, [numericOrder])
   
     useEffect(()=>{
         setListFiltered(filteredPokemons(props.list))
     },[searchInput,props.list])
 
+
     const filteredPokemons = (pokemonsList) => {
         return pokemonsList.filter((item) => item.name.toLowerCase().includes(searchInput.toLowerCase()))
-    } 
-
+    }
     return (
         <>
-            <div className="search-container">
+        {
+            (!isLoading) ? <LoadingCard/> 
+            :
+
+                <div className="search-container">
                 <header className="header-search">
                     <div className="logo-container">
                         <img className="img-logo" src="./images/Pokeball.png" alt="" />
@@ -54,24 +46,25 @@ const Buscador = (props) => {
                         </svg>
                     </div>
                 </header>
-                <input value={searchInput} className="searcher" type="text" placeholder="Buscar" onChange={(e)=>setSearchInput(e.target.value)}/>
-                <div className="pokemons-container">              
+                <input value={searchInput} className="searcher" type="text" placeholder="Buscar" onChange={(e) => setSearchInput(e.target.value)} />
+                <div className="pokemons-container">
                     {
                         listFiltered.map((item, key) => {
-                                return (
-                                    <Pokemon 
-                                        name={item.name}
-                                        type={item.type}
-                                        number={item.id}
-                                        img={item.img}
-                                        key={key}
-                                    />
-                                )
+                            return (
+                                <Pokemon
+                                    name={item.name}
+                                    type={item.type}
+                                    number={item.id}
+                                    img={item.img}
+                                    key={key}
+                                />
+                            )
                         })
                     }
 
                 </div>
             </div>
+        }
         </>
     )
 }
