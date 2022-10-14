@@ -41,7 +41,6 @@ function App() {
       fetch(`https://pokeapi.co/api/v2/pokemon-species/${poke.id}`)
         .then((response) => response.json())
         .then((response) => {
-          console.log(response)
           const description = response["flavor_text_entries"].find((item)=>item.language.name == "en")
           poke.description = description["flavor_text"];
     })})
