@@ -13,7 +13,7 @@ function App() {
  
   const getPokemons = async () => {
     let promises = [];
-    for (let index = 1; index < 249 ; index++){
+    for (let index = 1; index < 21; index++){
       await fetch(`https://pokeapi.co/api/v2/pokemon/${index}`)
         .then((response) => response.json())
         .then((response) => {
@@ -41,8 +41,9 @@ function App() {
       fetch(`https://pokeapi.co/api/v2/pokemon-species/${poke.id}`)
         .then((response) => response.json())
         .then((response) => {
-          const description = response["flavor_text_entries"][0]["flavor_text"]
-          poke.description = description;
+          console.log(response)
+          const description = response["flavor_text_entries"].find((item)=>item.language.name == "en")
+          poke.description = description["flavor_text"];
     })})
     setPokemonsList(promises)
   }
