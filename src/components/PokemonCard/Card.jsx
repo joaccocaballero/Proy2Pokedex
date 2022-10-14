@@ -39,11 +39,18 @@ const Card = (props) => {
     return (
         <>
             {
-                ( !detailedPokemon ) ? <LoadingCard  /> : 
+                ( !detailedPokemon ) ? 
+        
+                     <LoadingCard  /> 
+       
+               : 
            
+            
             <div className={detailedPokemon.type[0] + " contenedor-card" } >
+               
+               
                 <header className="header-card">                
-                    <div className="flex-row">
+                    <div className="flex-row div-poke-name">
                         <Link to={"/"}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="30" viewBox="0 0 24 24">
                                 <path fill="#FFFFFF" d="m12.23 20.512.774-.774a.469.469 0 0 0 0-.663l-6.06-6.06h13.337c.26 0 .469-.21.469-.468v-1.094a.469.469 0 0 0-.469-.469H6.944l6.06-6.06a.469.469 0 0 0 0-.662l-.774-.774a.469.469 0 0 0-.662 0l-8.18 8.18a.469.469 0 0 0 0 .664l8.18 8.18c.183.183.48.183.662 0Z" />
@@ -57,7 +64,7 @@ const Card = (props) => {
 
                 <div className="flex-center-column card-especific-pokemon">
                 <div className="flex-column pokeballBackground">
-                    <div id="card-img">
+                    <div id="card-img container">
                         <div className="left-frame">
                             <Link to={"/" + getPreviousPokemon(detailedPokemon.id)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" fill="none" transform="rotate(180)" viewBox="0 0 8 16">
@@ -65,8 +72,10 @@ const Card = (props) => {
                             </svg>
                             </Link>
                         </div>
-                        <img className="pokeball-img" src="./images/Pokeball.png" alt="imagen pokeball" />
+                        <div className="img-pokemons">
+                            <img className="pokeball-img" src="./images/Pokeball.png" alt="imagen pokeball" />
                             <img className="pok-card-img" src={detailedPokemon.img} alt="imagen del pokemon" />
+                        </div>
                         <div className="right-frame">
                             <Link to={"/" + getNextPokemon(detailedPokemon.id)}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="8" height="16" fill="none" viewBox="0 0 8 16">
@@ -80,7 +89,7 @@ const Card = (props) => {
                 
                 <div className="pokemon-about">
                     <div className="flex-center-column">
-                        <div className="pokemon-type-container">
+                        <div className="pokemon-type-container flex-row">
                             {
                                 detailedPokemon.type.map((item, key) => {
                                     return (
@@ -149,7 +158,8 @@ const Card = (props) => {
                 </div>
                 </div>
                 </div>
-        </div>
+            </div>
+   
         }
     </>
     )
