@@ -1,23 +1,16 @@
 
-
 html, body{
   margin: 0px;
   padding: 0px;
   background-color: #F7F7F7;
-}
-
-
-  ::-webkit-scrollbar {
+  position: absolute;
+  width: 95%;
+  height: 95%;
+} 
+::-webkit-scrollbar {
     display: none;
 }
 
-
-#root{
-  margin: 0px;
-  padding: 0px;
-  width: 100%;
-  min-height: 100%;
-}
 h1, p, ul {
   margin: 0px;
 }
@@ -85,8 +78,9 @@ ul{
 }
 
 .search-container{
-  margin:15px;
+  margin:5%;
   display: flex;
+  width: 100%;
   flex-direction: column;
   
 }
@@ -175,8 +169,11 @@ ul{
   border-radius: 10px;
   margin: 1px;
   background-size: 250px 250px;
-  height: 807px;
+  width: 100%;
+  height: 100%;
+  
 }
+
 .header-card{
   width: 100%;
   display: flex;
@@ -184,6 +181,7 @@ ul{
 }
 .card-especific-pokemon{
   margin: 0px;
+  max-height: 98%;
 }
 
 .flex-row{
@@ -196,8 +194,8 @@ ul{
 
 #card-img{
   width: inherit;
-  height: 25vh;
   display: grid;
+  height: 23vh;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -220,21 +218,20 @@ grid-column: 2/3;
 }
 
 .pok-card-img {
+  grid-column: 2/3;
   max-width: 250px;
   max-height: 250px;
   z-index: 2;
 }
 
 .left-frame{
-  grid-column: 1/2;
   position: absolute;
-  left: 25px;
+  left: 5%;
   top: 20%;
 }
 
 .right-frame{
-  grid-column: 3/4;
-  right: 25px;
+  right: -5%;
   position: absolute;
   top:20%;
 
@@ -275,7 +272,7 @@ grid-column: 2/3;
   flex-direction: column;
   margin: 0px;
   width: 105%;
-  height: 565px;
+  height: 67vh;
 }
 
 .type-about{
