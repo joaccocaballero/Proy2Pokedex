@@ -53,7 +53,7 @@ const Card = (props) => {
                         </div>
                         <span className="flex-row" style={{fontSize:"Large"}}>{"#"+ addZero(detailedPokemon.id, 3)}</span>
                     </header>
-
+                    <img className="pokeball-img" src="./images/Pokeball.png" alt="imagen pokeball" />
                     <div className="flex-center-column card-especific-pokemon">
                     <div className="flex-column pokeballBackground">
                         <div id="card-img container">
@@ -64,8 +64,7 @@ const Card = (props) => {
                                 </svg>
                                 </Link>
                             </div>
-                            <div className="img-pokemons">
-                                <img className="pokeball-img" src="./images/Pokeball.png" alt="imagen pokeball" />
+                            <div className="img-pokemons">                          
                                 <img className="pok-card-img" src={detailedPokemon.img} alt="imagen del pokemon" />
                             </div>
                             <div className="right-frame">
