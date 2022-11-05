@@ -206,6 +206,7 @@ grid-column: 2/3;
  display: flex;
  justify-content: center;
  margin-top: 15%;
+  width: 100%;
 }
 
 .pokeball-img{
@@ -219,18 +220,21 @@ grid-column: 2/3;
 }
 
 .pok-card-img {
-  width: 250px;
+  max-width: 250px;
+  max-height: 250px;
   z-index: 2;
 }
 
 .left-frame{
+  grid-column: 1/2;
   position: absolute;
- left: 10px;
+  left: 25px;
   top: 20%;
 }
 
 .right-frame{
-  right: 10px;
+  grid-column: 3/4;
+  right: 25px;
   position: absolute;
   top:20%;
 
