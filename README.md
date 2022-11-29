@@ -1,2 +1,2 @@
-# Pokedex 
-  Segundo Proyecto Integrador FSDB5 - Senpai Academy
+# Segundo Proyecto Integrador FSDB5 - Senpai Academy
+  Pokedex using React
