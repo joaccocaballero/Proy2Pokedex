@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { addZero, toPascalCase } from "../../helpers/helper";
+import { addZero, toPascalCase } from "../../functions/helper";
 
 const Pokemon = (props) =>{
     return(

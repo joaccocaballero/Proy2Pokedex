@@ -1,5 +1,5 @@
 import React from "react";
-import { toPascalCase } from "../../helpers/helper";
+import { toPascalCase } from "../../functions/helper";
 
 const PokeType = (props)=>{
     return(

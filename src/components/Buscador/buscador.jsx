@@ -4,7 +4,7 @@ import { useState } from "react";
 import NumericIcon from "./NumericOrder";
 import AlphabeticOrder from "./AlphabeticOrder";
 import LoadingCard from "./LoadingCard";
-import { sortByTrash, sortByName, filteredPokemons } from "../../helpers/helper";
+import { sortByTrash, sortByName, filteredPokemons } from "../../functions/helper";
 
 const Buscador = (props) => {
     const [searchInput, setSearchInput] = useState("")

@@ -3,7 +3,7 @@ import ProgressBar from "./ProgressBar";
 import PokeType from "./PokeType";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { addZero, toPascalCase,clearAndUpper } from "../../helpers/helper";
+import { addZero, toPascalCase,clearAndUpper } from "../../functions/helper";
 import LoadingCard from "../Buscador/LoadingCard";
 
 
